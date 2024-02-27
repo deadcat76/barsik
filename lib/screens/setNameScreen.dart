@@ -37,7 +37,7 @@ class _setNameScreenState extends State<setNameScreen> {
                 Column(
                       children: <Widget>[
                       const Text('Имя', style: TextStyle(fontSize: 35, fontFamily: 'Rahovets', color: Colors.black87)),
-                      reusableTextField('Введи своё имя', Icons.drive_file_rename_outline_rounded, false, _nameTextController),] ),
+                      reusableTextField('Введи своё имя',  false, _nameTextController),] ),
                 Row(
                     children: <Widget>[
                     catWidget(assetName),

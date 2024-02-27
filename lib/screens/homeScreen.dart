@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
               ElevatedButton(
                 onPressed: (){
                   GoRouter.of(context)
-                      .pushNamed(MyAppRoutesConstants.setNameRouteName);
+                      .pushNamed(MyAppRoutesConstants.nameSetRoute);
                 },
                 child: const Text('Давай играть!', style: TextStyle(fontSize: 35, fontFamily: 'Rahovets'),),)
           ],
