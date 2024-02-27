@@ -1,4 +1,5 @@
 import 'package:barsik/project/routes/app_route_constants.dart';
+import 'package:barsik/screens/setNameScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -21,7 +22,7 @@ class Home extends StatelessWidget {
             children: <Widget>[
               const Text(
                 'Барсик',
-                style: TextStyle(fontSize: 70),
+                style: TextStyle(fontSize: 70, fontFamily: 'Rahovets'),
               ),
               const SizedBox(
                 height: 30,

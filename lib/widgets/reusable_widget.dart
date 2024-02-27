@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 TextField reusableTextField (String text, bool isPassword, TextEditingController controller){
   return TextField(
@@ -8,7 +7,7 @@ TextField reusableTextField (String text, bool isPassword, TextEditingController
     enableSuggestions: !isPassword,
     autocorrect: !isPassword,
     cursorColor: Colors.black,
-    style: TextStyle(color: HexColor("#3E3A39"), fontFamily: 'Bainsley'),
+    style: TextStyle(color: Colors.white.withOpacity(0.9)),
     decoration: InputDecoration(
         labelText: text,
         labelStyle: TextStyle(color: Colors.black.withOpacity(0.9)),

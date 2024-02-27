@@ -18,59 +18,79 @@ class _NameScreenState extends State<NameScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Container(
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/back1.jpg'),
-                  fit: BoxFit.cover
-              )
-          ),
-          child:Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top:350,bottom:0,left:0,right:0),
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'Имя',
-                        style: TextStyle(fontSize: 35, fontFamily: 'Rahovets', color: HexColor("#3E3A39")),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      SizedBox(
-                        width: 300,
-                        child: reusableTextField('Введи своё имя', false, _nameTextController),
-                      ),
-                      ElevatedButton(
-                        onPressed: (){
-                          GoRouter.of(context)
-                              .pushNamed(MyAppRoutesConstants.ageSetRoute);
-                        },
-                        child: Text('ок', style: TextStyle(fontSize: 32, fontFamily: 'Rahovets', color: HexColor("#3E3A39")),),),
-
-                    ],
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/back1.jpg'), fit: BoxFit.cover)),
+        child: Column(children: <Widget>[
+          Padding(
+            padding:
+                const EdgeInsets.only(top: 350, bottom: 0, left: 0, right: 0),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'Имя',
+                    style: TextStyle(
+                        fontSize: 35,
+                        fontFamily: 'Rahovets',
+                        color: HexColor("#3E3A39")),
                   ),
-                ),),
-              Row(
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  SizedBox(
+                    width: 300,
+                    child: reusableTextField(
+                        'Введи своё имя', false, _nameTextController),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      GoRouter.of(context)
+                          .pushNamed(MyAppRoutesConstants.ageSetRoute);
+                    },
+                    child: Text(
+                      'ок',
+                      style: TextStyle(
+                          fontSize: 32,
+                          fontFamily: 'Rahovets',
+                          color: HexColor("#3E3A39")),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Row(
+            children: [
+              Column(
+                children: [catWidget(assetName)],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(children: [catWidget(assetName)],),
-                  Column(
+                  Padding(
+                    padding: const EdgeInsets.only(left: 50),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Барсик',
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: 'Rahovets',
+                              color: HexColor("#FFB271")),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
                     children: [
-                      Row(
-                        children: [
-                          Text(
-                            'Барсик',
-                            style: TextStyle(fontSize: 30, fontFamily: 'Rahovets', color: HexColor("#FFB271")),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Padding(padding: const EdgeInsets.only(top: 0, left: 0, bottom: 0, right: 20),
-                              child: Expanded(child: Container(
+                      Padding(
+                          padding: const EdgeInsets.only(
+                              top: 0, left: 0, bottom: 0, right: 20),
+                          child: Expanded(
+                              child: Container(
                                   height: 170,
                                   width: 950,
                                   padding: const EdgeInsets.all(30),
@@ -79,18 +99,23 @@ class _NameScreenState extends State<NameScreen> {
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(60),
                                   ),
-                                  child: Text('Привет, друг! Давай знакомиться! Меня зовут Барсик, и я живу в (название)! А тебя как зовут? Попроси взрослого помочь тебе написать твоё имя!',
-                                      textDirection: TextDirection.ltr, style: TextStyle(fontSize: 27, color: HexColor("#3E3A39"), fontFamily: 'Bainsley') )))
-                            //Column(),
-                          )],
-                      )],
-                  ),
+                                  child: Text(
+                                      'Привет, друг! Давай знакомиться! Меня зовут Барсик, и я живу в (название)! А тебя как зовут? Попроси взрослого помочь тебе написать твоё имя!',
+                                      textDirection: TextDirection.ltr,
+                                      style: TextStyle(
+                                          fontSize: 27,
+                                          color: HexColor("#3E3A39"),
+                                          fontFamily: 'Bainsley'))))
+                          //Column(),
+                          )
                     ],
                   )
-
-              ]),
-          ),
+                ],
+              ),
+            ],
+          )
+        ]),
+      ),
     );
   }
 }
-
