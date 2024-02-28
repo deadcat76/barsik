@@ -12,85 +12,118 @@ class ActionScreen extends StatefulWidget {
 }
 
 class _ActionScreenState extends State<ActionScreen> {
-  final TextEditingController _nameTextController = TextEditingController();
   final String assetName = 'assets/Barsik3.png';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Container(
+      body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/back2.jpg'),
                 fit: BoxFit.cover
             )
         ),
-        child:Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top:350,bottom:0,left:0,right:0),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      ElevatedButton(
-                        onPressed: (){
-                          GoRouter.of(context)
-                              .pushNamed(MyAppRoutesConstants.actionRoute);
-                        },
-                        child: Text('Давай кушать', style: TextStyle(fontSize: 32, fontFamily: 'Rahovets', color: HexColor("#3E3A39")),),),
-                      ElevatedButton(
-                        onPressed: (){
-                          GoRouter.of(context)
-                              .pushNamed(MyAppRoutesConstants.actionRoute);
-                        },
-                        child: Text('Давай играть', style: TextStyle(fontSize: 32, fontFamily: 'Rahovets', color: HexColor("#3E3A39")),),),
-                      const SizedBox(
-                        height: 165,
-                      ),
-                    ],
-                  ),
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 350, bottom: 0, left: 0, right: 0),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    ElevatedButton(
+                      onPressed: () {
+                        GoRouter.of(context)
+                            .pushNamed(MyAppRoutesConstants.actionRoute);
+                      },
+                      child: Text('Давай кушать', style: TextStyle(
+                          fontSize: 32, fontFamily: 'Rahovets', color: HexColor(
+                          "#3E3A39")),),),
+                    ElevatedButton(
+                      onPressed: () {
+                        GoRouter.of(context)
+                            .pushNamed(MyAppRoutesConstants.actionRoute);
+                      },
+                      child: Text('Давай играть', style: TextStyle(
+                          fontSize: 32, fontFamily: 'Rahovets', color: HexColor(
+                          "#3E3A39")),),),
+                    const SizedBox(
+                      height: 165,
+                    ),
+                  ],
+                ),
 
+              ),
+            ),
+            Row(
+                children: [
+                Column(children: [catWidget(assetName)
+          ],),
+        Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Row(
+                  children: [
+                    Text(
+                      'Барсик',
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontFamily: 'Rahovets',
+                          color: HexColor("#FFB271")),
+                    ),
+                  ],
                 ),
               ),
               Row(
                 children: [
-                  Column(children: [catWidget(assetName)],),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 50),
-                        child: Row(
-                          children: [
-                            Text(
-                              'Барсик',
-                              style: TextStyle(
-                                  fontSize: 30,
-                                  fontFamily: 'Rahovets',
-                                  color: HexColor("#FFB271")),
-                            ),
-                          ],
+                  Padding(padding: const EdgeInsets.only(
+                      top: 0, left: 0, bottom: 0, right: 20),
+                    child: Expanded(child: Container(
+                        height: 170,
+                        width: 950,
+                        padding: const EdgeInsets.all(30),
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(60),
                         ),
-                      ),
-                      Row(
-                        children: [
-                          Padding(padding: const EdgeInsets.only(top: 0, left: 0, bottom: 0, right: 20),
-                              child: Expanded(child: Container(
-                                  height: 170,
-                                  width: 950,
-                                  padding: const EdgeInsets.all(30),
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(60),
-                                  ),
-                                  child: Text('Круто! Нажми зеленую кнопку, чтобы пообедать или желтую кнопку, чтобы поиграть!',
-                                      textDirection: TextDirection.ltr, style: TextStyle(fontSize: 27, color: HexColor("#3E3A39"), fontFamily: 'Bainsley'))))
+                        child: RichText(
+                          text: TextSpan(
+                              text: 'Круто! Нажми',
+                              style: TextStyle(fontFamily: 'Bainsley',
+                                  fontSize: 27,
+                                  color: HexColor("#3E3A39")),
+                              children: <TextSpan>[
+                                const TextSpan(text: ' зеленую кнопку',
+                                    style: TextStyle(fontFamily: 'Bainsley',
+                                        fontSize: 27,
+                                        color: Colors.green)),
+                                TextSpan(text: ', чтобы пообедать или',
+                                    style: TextStyle(fontFamily: 'Bainsley',
+                                        fontSize: 27,
+                                        color: HexColor("#3E3A39"))),
+                                const TextSpan(text: ' желтую кнопку',
+                                    style: TextStyle(fontFamily: 'Bainsley',
+                                        fontSize: 27,
+                                        color: Colors.yellow)),
+                                TextSpan(text: ', чтобы поиграть!',
+                                    style: TextStyle(fontFamily: 'Bainsley',
+                                        fontSize: 27,
+                                        color: HexColor("#3E3A39")))
+                              ]
+                          ),
+                        )
 
-                            //Column(),
-                          )],
-                      )],
+                      //Text('Круто! Нажми зеленую кнопку, чтобы пообедать или желтую кнопку, чтобы поиграть!',
+                      //textDirection: TextDirection.ltr, style: TextStyle(fontSize: 27, color: HexColor("#3E3A39"), fontFamily: 'Bainsley'))))
+
+                      //Column(),
+                    )))],
+                    )],
                   ),
                 ],
               )
