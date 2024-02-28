@@ -38,7 +38,7 @@ class _NameScreenState extends State<NameScreen> {
                         style: TextStyle(fontSize: 35, fontFamily: 'Rahovets', color: HexColor("#3E3A39")),
                       ),
                       const SizedBox(
-                        height: 15,
+                        height: 10,
                       ),
                       SizedBox(
                         width: 300,

@@ -24,6 +24,6 @@ Image catWidget(String imageName){
     imageName,
     fit: BoxFit.fitWidth,
     width: 271,
-    height: 300
+    height: 330
   );
 }

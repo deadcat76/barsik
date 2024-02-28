@@ -34,23 +34,46 @@ class _ActionScreenState extends State<ActionScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     ElevatedButton(
+                      style: ButtonStyle(
+                          fixedSize:
+                          MaterialStateProperty.all(const Size(350, 75)),
+                          backgroundColor:
+                          MaterialStateProperty.all(HexColor("#45BEA1")),
+                          textStyle: MaterialStateProperty.all(
+                              TextStyle(color: HexColor("#3E3A39"))),
+                          padding:
+                          MaterialStateProperty.all(const EdgeInsets.all(20)),
+                          shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)))),
                       onPressed: () {
                         GoRouter.of(context)
                             .pushNamed(MyAppRoutesConstants.actionRoute);
                       },
-                      child: Text('Давай кушать', style: TextStyle(
-                          fontSize: 32, fontFamily: 'Rahovets', color: HexColor(
-                          "#3E3A39")),),),
-                    ElevatedButton(
-                      onPressed: () {
-                        GoRouter.of(context)
-                            .pushNamed(MyAppRoutesConstants.actionRoute);
-                      },
-                      child: Text('Давай играть', style: TextStyle(
-                          fontSize: 32, fontFamily: 'Rahovets', color: HexColor(
-                          "#3E3A39")),),),
+                      child: const Text('Давай кушать', style: TextStyle(
+                          fontSize: 28, fontFamily: 'Rahovets', color: Colors.white),),),
                     const SizedBox(
-                      height: 165,
+                      width: 60,
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                          fixedSize:
+                          MaterialStateProperty.all(const Size(350, 75)),
+                          backgroundColor:
+                          MaterialStateProperty.all(HexColor("#DFA81C")),
+                          textStyle: MaterialStateProperty.all(
+                              TextStyle(color: HexColor("#3E3A39"))),
+                          padding:
+                          MaterialStateProperty.all(const EdgeInsets.all(20)),
+                          shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)))),
+                      onPressed: () {
+                        GoRouter.of(context)
+                            .pushNamed(MyAppRoutesConstants.actionRoute);
+                      },
+                      child: const Text('Давай играть', style: TextStyle(
+                          fontSize: 28, fontFamily: 'Rahovets', color: Colors.white),),),
+                    const SizedBox(
+                      height: 150,
                     ),
                   ],
                 ),
@@ -117,10 +140,6 @@ class _ActionScreenState extends State<ActionScreen> {
                               ]
                           ),
                         )
-
-                      //Text('Круто! Нажми зеленую кнопку, чтобы пообедать или желтую кнопку, чтобы поиграть!',
-                      //textDirection: TextDirection.ltr, style: TextStyle(fontSize: 27, color: HexColor("#3E3A39"), fontFamily: 'Bainsley'))))
-
                       //Column(),
                     )))],
                     )],

@@ -1,6 +1,5 @@
 import 'package:barsik/widgets/reusable_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class setNameScreen extends StatefulWidget {
   const setNameScreen({super.key});
@@ -32,7 +31,7 @@ class _setNameScreenState extends State<setNameScreen> {
             Row(
               children: [
                 const SizedBox(
-                  height: 30,
+                  height: 25,
                 ),
                 Column(
                       children: <Widget>[

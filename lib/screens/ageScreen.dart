@@ -31,6 +31,8 @@ class _AgeScreenState extends State<AgeScreen> {
                 children: <Widget>[
                   ElevatedButton(
                     style: ButtonStyle(
+                        fixedSize:
+                            MaterialStateProperty.all(const Size(350, 75)),
                         backgroundColor:
                             MaterialStateProperty.all(Colors.white),
                         textStyle: MaterialStateProperty.all(
@@ -46,12 +48,26 @@ class _AgeScreenState extends State<AgeScreen> {
                     child: Text(
                       'До 5 лет',
                       style: TextStyle(
-                          fontSize: 32,
+                          fontSize: 28,
                           fontFamily: 'Rahovets',
                           color: HexColor("#3E3A39")),
                     ),
                   ),
+                  const SizedBox(
+                    width: 60,
+                  ),
                   ElevatedButton(
+                    style: ButtonStyle(
+                        fixedSize:
+                            MaterialStateProperty.all(const Size(350, 75)),
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.white),
+                        textStyle: MaterialStateProperty.all(
+                            TextStyle(color: HexColor("#3E3A39"))),
+                        padding:
+                            MaterialStateProperty.all(const EdgeInsets.all(20)),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)))),
                     onPressed: () {
                       GoRouter.of(context)
                           .pushNamed(MyAppRoutesConstants.actionRoute);
@@ -59,17 +75,17 @@ class _AgeScreenState extends State<AgeScreen> {
                     child: Text(
                       'От 5 до 8 лет',
                       style: TextStyle(
-                          fontSize: 32,
+                          fontSize: 28,
                           fontFamily: 'Rahovets',
                           color: HexColor("#3E3A39")),
                     ),
                   ),
-                  const SizedBox(
-                    height: 165,
-                  ),
                 ],
               ),
             ),
+          ),
+          const SizedBox(
+            height: 85,
           ),
           Row(
             children: [
