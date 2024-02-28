@@ -54,7 +54,7 @@ class _AgeScreenState extends State<AgeScreen> {
                     ),
                   ),
                   const SizedBox(
-                    width: 60,
+                    width: 30,
                   ),
                   ElevatedButton(
                     style: ButtonStyle(

@@ -52,7 +52,7 @@ class _ActionScreenState extends State<ActionScreen> {
                       child: const Text('Давай кушать', style: TextStyle(
                           fontSize: 28, fontFamily: 'Rahovets', color: Colors.white),),),
                     const SizedBox(
-                      width: 60,
+                      width: 30,
                     ),
                     ElevatedButton(
                       style: ButtonStyle(
@@ -121,18 +121,18 @@ class _ActionScreenState extends State<ActionScreen> {
                                   fontSize: 27,
                                   color: HexColor("#3E3A39")),
                               children: <TextSpan>[
-                                const TextSpan(text: ' зеленую кнопку',
+                                TextSpan(text: ' зеленую кнопку',
                                     style: TextStyle(fontFamily: 'Bainsley',
                                         fontSize: 27,
-                                        color: Colors.green)),
+                                        color: HexColor("#45BEA1"))),
                                 TextSpan(text: ', чтобы пообедать или',
                                     style: TextStyle(fontFamily: 'Bainsley',
                                         fontSize: 27,
                                         color: HexColor("#3E3A39"))),
-                                const TextSpan(text: ' желтую кнопку',
+                                TextSpan(text: ' желтую кнопку',
                                     style: TextStyle(fontFamily: 'Bainsley',
                                         fontSize: 27,
-                                        color: Colors.yellow)),
+                                        color: HexColor("#DFA81C"))),
                                 TextSpan(text: ', чтобы поиграть!',
                                     style: TextStyle(fontFamily: 'Bainsley',
                                         fontSize: 27,
