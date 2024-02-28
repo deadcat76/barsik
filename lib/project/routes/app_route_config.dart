@@ -3,7 +3,7 @@ import 'package:barsik/screens/errorScreen.dart';
 import 'package:barsik/screens/homeScreen.dart';
 import 'package:barsik/screens/nameScreen.dart';
 import 'package:barsik/screens/ageScreen.dart';
-import 'package:barsik/screens/setNameScreen.dart';
+import 'package:barsik/screens/actionScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -27,6 +27,12 @@ class MyAppRouter{
           path: '/age_set',
           pageBuilder: (context, state) {
             return const MaterialPage(child: AgeScreen());
+          }),
+      GoRoute(
+          name: MyAppRoutesConstants.actionRoute,
+          path: '/action',
+          pageBuilder: (context, state) {
+            return const MaterialPage(child: ActionScreen());
           }),
     ],
     errorPageBuilder: (context, state) {
