@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
               ElevatedButton(
                 style: ButtonStyle (
                     textStyle: MaterialStateProperty.all(
-                        TextStyle(color: HexColor("#47BFE2"))), // не видит
+                        TextStyle(color: HexColor("#47BFE2"))),
                     padding:
                     MaterialStateProperty.all(const EdgeInsets.only(left: 13, top: 13, bottom: 13, right: 20)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(

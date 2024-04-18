@@ -12,7 +12,7 @@ class AgeScreen extends StatefulWidget {
 }
 
 class _AgeScreenState extends State<AgeScreen> {
-  final String assetName = 'assets/Barsik3.png';
+  final String assetName = 'assets/cat_smile.png';
 
   @override
   Widget build(BuildContext context) {
@@ -100,44 +100,45 @@ class _AgeScreenState extends State<AgeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 50),
-                    child: Row(
-                      children: [
-                        Text(
-                          'Барсик',
-                          style: TextStyle(
-                              fontSize: 30,
-                              fontFamily: 'Rahovets',
-                              color: HexColor("#FFB271")),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Padding(
-                          padding: const EdgeInsets.only(
-                              top: 0, left: 0, bottom: 0, right: 20),
-                          child: Expanded(
-                              child: Container(
-                                  height: 138,
-                                  width: 835,
-                                  padding: const EdgeInsets.all(30),
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  child: Text(
-                                      'Привет, друг! Я Барсик! Рад приветствовать тебя в нашем веселом мире развлечений! Скажи, пожалуйста, сколько тебе лет? Нажми зелёную кнопку, если тебе до 5 лет, или оранжевую кнопку, если тебе от 5 до 7 лет.',
-                                      textDirection: TextDirection.ltr,
+                      padding: const EdgeInsets.all(0),
+                      child: Expanded(
+                          child: Container(
+                              height: 138,
+                              width: 835,
+                              padding: const EdgeInsets.only(top: 0, left: 50, bottom: 0, right: 50),
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: RichText(
+                                  text: TextSpan (
+                                      text: 'Привет, друг! Я Барсик! Рад приветствовать тебя в нашем веселом мире развлечений! Скажи, пожалуйста, сколько тебе лет? Нажми',
                                       style: TextStyle(
-                                          fontSize: 27,
+                                          fontSize: 22,
                                           color: HexColor("#3E3A39"),
-                                          fontFamily: 'Montserrat'))))
-                          //Column(),
-                          )
-                    ],
+                                          fontFamily: 'Montserrat'),
+                                      children: <TextSpan> [
+                                        TextSpan(text: ' зеленую кнопку',
+                                            style: TextStyle(fontFamily: 'Montserrat',
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 22,
+                                                color: HexColor("#1CEA56"))),
+                                        TextSpan(text: ', если тебе до 5 лет, или',
+                                            style: TextStyle(fontFamily: 'Montserrat',
+                                                fontSize: 22,
+                                                color: HexColor("#3E3A39"))),
+                                        TextSpan(text: ' оранжевую кнопку',
+                                            style: TextStyle(fontFamily: 'Montserrat',
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 22,
+                                                color: HexColor("#FF8E1F"))),
+                                        TextSpan(text: ', если тебе от 5 до 7 лет.',
+                                            style: TextStyle(fontFamily: 'Montserrat',
+                                                fontSize: 22,
+                                                color: HexColor("#3E3A39"))),
+                                      ]))))
+                    //Column(),
                   )
                 ],
               ),
