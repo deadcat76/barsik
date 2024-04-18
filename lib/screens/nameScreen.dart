@@ -37,13 +37,10 @@ class _NameScreenState extends State<NameScreen> {
                         'Имя',
                         style: TextStyle(fontSize: 35, fontFamily: 'Rahovets', color: HexColor("#3E3A39")),
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      SizedBox(
-                        width: 300,
-                        child: reusableTextField('Введи своё имя', false, _nameTextController),
-                      ),
+                      // SizedBox(
+                      //   width: 300,
+                      //   child: reusableTextField('Введи своё имя', false, _nameTextController),
+                      // ), ошибка
                       ElevatedButton(
                         onPressed: (){
                           GoRouter.of(context)

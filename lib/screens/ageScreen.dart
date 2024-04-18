@@ -20,7 +20,7 @@ class _AgeScreenState extends State<AgeScreen> {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/back1.jpg'), fit: BoxFit.cover)),
+                image: AssetImage('assets/back_main.jpg'), fit: BoxFit.cover)),
         child: Column(children: <Widget>[
           Padding(
             padding:
@@ -32,25 +32,27 @@ class _AgeScreenState extends State<AgeScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                            MaterialStateProperty.all(const Size(350, 75)),
+                            MaterialStateProperty.all(const Size(330, 80)),
                         backgroundColor:
-                            MaterialStateProperty.all(Colors.white),
+                            MaterialStateProperty.all(HexColor("#1CEA56")),
                         textStyle: MaterialStateProperty.all(
-                            TextStyle(color: HexColor("#3E3A39"))),
+                            const TextStyle(color: Colors.white)),
                         padding:
                             MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30)))),
+                            borderRadius: BorderRadius.circular(15),
+                            side: const BorderSide(color: Colors.white, width: 5.0)))),
                     onPressed: () {
                       GoRouter.of(context)
                           .pushNamed(MyAppRoutesConstants.actionRoute);
                     },
-                    child: Text(
+                    child: const Text(
                       'До 5 лет',
                       style: TextStyle(
-                          fontSize: 28,
-                          fontFamily: 'Rahovets',
-                          color: HexColor("#3E3A39")),
+                          fontSize: 35,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ),
                   const SizedBox(
@@ -59,25 +61,27 @@ class _AgeScreenState extends State<AgeScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                            MaterialStateProperty.all(const Size(350, 75)),
+                            MaterialStateProperty.all(const Size(330, 80)),
                         backgroundColor:
-                            MaterialStateProperty.all(Colors.white),
+                            MaterialStateProperty.all(HexColor("#FF8E1F")),
                         textStyle: MaterialStateProperty.all(
-                            TextStyle(color: HexColor("#3E3A39"))),
+                            const TextStyle(color: Colors.white)),
                         padding:
                             MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30)))),
+                            borderRadius: BorderRadius.circular(15),
+                            side: const BorderSide(color: Colors.white, width: 5.0)))),
                     onPressed: () {
                       GoRouter.of(context)
                           .pushNamed(MyAppRoutesConstants.actionRoute);
                     },
-                    child: Text(
-                      'От 5 до 8 лет',
+                    child: const Text(
+                      'От 5 до 7 лет',
                       style: TextStyle(
-                          fontSize: 28,
-                          fontFamily: 'Rahovets',
-                          color: HexColor("#3E3A39")),
+                          fontSize: 35,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                   ),
                 ],
@@ -116,21 +120,21 @@ class _AgeScreenState extends State<AgeScreen> {
                               top: 0, left: 0, bottom: 0, right: 20),
                           child: Expanded(
                               child: Container(
-                                  height: 170,
-                                  width: 950,
+                                  height: 138,
+                                  width: 835,
                                   padding: const EdgeInsets.all(30),
                                   alignment: Alignment.center,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius: BorderRadius.circular(60),
+                                    borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: Text(
-                                      'Костя, приятно познакомиться! Скажи, пожалуйста, сколько тебе лет?',
+                                      'Привет, друг! Я Барсик! Рад приветствовать тебя в нашем веселом мире развлечений! Скажи, пожалуйста, сколько тебе лет? Нажми зелёную кнопку, если тебе до 5 лет, или оранжевую кнопку, если тебе от 5 до 7 лет.',
                                       textDirection: TextDirection.ltr,
                                       style: TextStyle(
                                           fontSize: 27,
                                           color: HexColor("#3E3A39"),
-                                          fontFamily: 'Bainsley'))))
+                                          fontFamily: 'Montserrat'))))
                           //Column(),
                           )
                     ],

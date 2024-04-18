@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-TextField reusableTextField (String text, bool isPassword, TextEditingController controller){
+TextField reusableTextField (String text, bool isPassword, TextEditingController controller, Color color){
   return TextField(
     controller: controller,
     obscureText: isPassword,
     enableSuggestions: !isPassword,
     autocorrect: !isPassword,
     cursorColor: Colors.black,
-    style: TextStyle(color: Colors.white.withOpacity(0.9)),
+    style: TextStyle(color: color),
     decoration: InputDecoration(
         labelText: text,
         labelStyle: TextStyle(color: Colors.black.withOpacity(0.9)),
