@@ -5,5 +5,7 @@ class MyAppRoutesConstants{
   static const String ageSetRoute = 'age_set';
   static const String ageEditRoute = 'age_edit';
   static const String actionRoute = 'action';
+  static const String actionDoubleRoute = 'action_double';
+
 
 }

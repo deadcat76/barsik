@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class ActionScreen extends StatefulWidget {
-  const ActionScreen({super.key});
+class ActionDoubleScreen extends StatefulWidget {
+  const ActionDoubleScreen({super.key});
 
   @override
-  State<ActionScreen> createState() => _ActionScreenState();
+  State<ActionDoubleScreen> createState() => _ActionDoubleScreenState();
 }
 
-class _ActionScreenState extends State<ActionScreen> {
+class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,12 +78,13 @@ class _ActionScreenState extends State<ActionScreen> {
                   ],
                 ),
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(0),
                       child: Center(
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             InkWell(
                               onTap: () {
@@ -131,7 +132,7 @@ class _ActionScreenState extends State<ActionScreen> {
                   ],
                 ),
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Row(
                       children: [
@@ -203,48 +204,48 @@ class _ActionScreenState extends State<ActionScreen> {
                                     color: HexColor("#3E3A39"),
                                     fontFamily: 'Montserrat'),
                                 children: <TextSpan>[
-                              TextSpan(
-                                  text: ' зеленую кнопку',
-                                  style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 22,
-                                      color: HexColor("#1CEA56"))),
-                              TextSpan(
-                                  text:
+                                  TextSpan(
+                                      text: ' зеленую кнопку',
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 22,
+                                          color: HexColor("#1CEA56"))),
+                                  TextSpan(
+                                      text:
                                       ', чтобы покушать и зарядиться энергией,',
-                                  style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 22,
-                                      color: HexColor("#3E3A39"))),
-                              TextSpan(
-                                  text: ' оранжевую кнопку',
-                                  style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 22,
-                                      color: HexColor("#FF8E1F"))),
-                              TextSpan(
-                                  text:
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 22,
+                                          color: HexColor("#3E3A39"))),
+                                  TextSpan(
+                                      text: ' оранжевую кнопку',
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 22,
+                                          color: HexColor("#FF8E1F"))),
+                                  TextSpan(
+                                      text:
                                       ', чтобы окунуться в захватывающий мир развлечений, или',
-                                  style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 22,
-                                      color: HexColor("#3E3A39"))),
-                              TextSpan(
-                                  text: ' розовую кнопку',
-                                  style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 22,
-                                      color: HexColor("#F11D81"))),
-                              TextSpan(
-                                  text: ', чтобы я рассказал историю!',
-                                  style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 22,
-                                      color: HexColor("#3E3A39"))),
-                            ]))),
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 22,
+                                          color: HexColor("#3E3A39"))),
+                                  TextSpan(
+                                      text: ' розовую кнопку',
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 22,
+                                          color: HexColor("#F11D81"))),
+                                  TextSpan(
+                                      text: ', чтобы я рассказал историю!',
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 22,
+                                          color: HexColor("#3E3A39"))),
+                                ]))),
                   ),
                 ],
               )
