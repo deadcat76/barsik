@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class AgeScreen extends StatefulWidget {
-  const AgeScreen({super.key});
+class AgeEditScreen extends StatefulWidget {
+  const AgeEditScreen({super.key});
 
   @override
-  State<AgeScreen> createState() => _AgeScreenState();
+  State<AgeEditScreen> createState() => _AgeEditScreenState();
 }
 
-class _AgeScreenState extends State<AgeScreen> {
+class _AgeEditScreenState extends State<AgeEditScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class _AgeScreenState extends State<AgeScreen> {
                             .pushNamed(MyAppRoutesConstants.ageEditRoute);
                       },
                       child: const Image(
-                        image: AssetImage('assets/settings.png'),
+                        image: AssetImage('assets/settings_active.png'),
                         width: 90,
                         height: 90,
                       ),
@@ -70,13 +70,13 @@ class _AgeScreenState extends State<AgeScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                            MaterialStateProperty.all(const Size(320, 80)),
+                        MaterialStateProperty.all(const Size(320, 80)),
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("#1CEA56")),
+                        MaterialStateProperty.all(HexColor("#1CEA56")),
                         textStyle: MaterialStateProperty.all(
                             const TextStyle(color: Colors.white)),
                         padding:
-                            MaterialStateProperty.all(const EdgeInsets.all(20)),
+                        MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                             side: const BorderSide(
@@ -100,13 +100,13 @@ class _AgeScreenState extends State<AgeScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                            MaterialStateProperty.all(const Size(320, 80)),
+                        MaterialStateProperty.all(const Size(320, 80)),
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("#FF8E1F")),
+                        MaterialStateProperty.all(HexColor("#FF8E1F")),
                         textStyle: MaterialStateProperty.all(
                             const TextStyle(color: Colors.white)),
                         padding:
-                            MaterialStateProperty.all(const EdgeInsets.all(20)),
+                        MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                             side: const BorderSide(
@@ -137,13 +137,13 @@ class _AgeScreenState extends State<AgeScreen> {
               Stack(
                 children: [
                   const Row(
-                    children: [
-                      Image(
-                        image: AssetImage('assets/cat_smile.png'),
-                        width: 287.09,
-                        height: 317,
-                      ),
-                    ]
+                      children: [
+                        Image(
+                          image: AssetImage('assets/cat_smile.png'),
+                          width: 287.09,
+                          height: 317,
+                        ),
+                      ]
                   ),
                   Positioned(
                     top: 150,
@@ -160,7 +160,7 @@ class _AgeScreenState extends State<AgeScreen> {
                         child: RichText(
                             text: TextSpan(
                                 text:
-                                'Привет, друг! Я Барсик! Рад приветствовать тебя в нашем веселом мире развлечений! Скажи, пожалуйста, сколько тебе лет? Нажми',
+                                'Неправильно указал свой возраст? Ничего страшного! Давай его изменим. Нажми',
                                 style: TextStyle(
                                     fontSize: 22,
                                     color: HexColor("#3E3A39"),
@@ -187,7 +187,7 @@ class _AgeScreenState extends State<AgeScreen> {
                                           fontSize: 22,
                                           color: HexColor("#FF8E1F"))),
                                   TextSpan(
-                                      text: ', если тебе от 5 до 7 лет.',
+                                      text: ', если тебе от 5 до 7 лет, и мы продолжим играть!',
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontSize: 22,

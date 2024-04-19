@@ -12,144 +12,247 @@ class ActionScreen extends StatefulWidget {
 }
 
 class _ActionScreenState extends State<ActionScreen> {
-  final String assetName = 'assets/Barsik3.png';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/back2.jpg'),
-                fit: BoxFit.cover
-            )
-        ),
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(
-                  top: 350, bottom: 0, left: 0, right: 0),
-              child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    ElevatedButton(
-                      style: ButtonStyle(
-                          fixedSize:
-                          MaterialStateProperty.all(const Size(350, 75)),
-                          backgroundColor:
-                          MaterialStateProperty.all(HexColor("#45BEA1")),
-                          textStyle: MaterialStateProperty.all(
-                              TextStyle(color: HexColor("#3E3A39"))),
-                          padding:
-                          MaterialStateProperty.all(const EdgeInsets.all(20)),
-                          shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)))),
-                      onPressed: () {
-                        GoRouter.of(context)
-                            .pushNamed(MyAppRoutesConstants.actionRoute);
-                      },
-                      child: const Text('Давай кушать', style: TextStyle(
-                          fontSize: 28, fontFamily: 'Rahovets', color: Colors.white),),),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                          fixedSize:
-                          MaterialStateProperty.all(const Size(350, 75)),
-                          backgroundColor:
-                          MaterialStateProperty.all(HexColor("#DFA81C")),
-                          textStyle: MaterialStateProperty.all(
-                              TextStyle(color: HexColor("#3E3A39"))),
-                          padding:
-                          MaterialStateProperty.all(const EdgeInsets.all(20)),
-                          shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)))),
-                      onPressed: () {
-                        GoRouter.of(context)
-                            .pushNamed(MyAppRoutesConstants.actionRoute);
-                      },
-                      child: const Text('Давай играть', style: TextStyle(
-                          fontSize: 28, fontFamily: 'Rahovets', color: Colors.white),),),
-                    const SizedBox(
-                      height: 150,
-                    ),
-                  ],
-                ),
+                image: AssetImage('assets/back_main.jpg'), fit: BoxFit.cover)),
+        child: Column(children: <Widget>[
 
-              ),
-            ),
-            Row(
-                children: [
-                Column(children: [catWidget(assetName)
-          ],),
-        Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 50),
-                child: Row(
+          Padding(
+            padding: const EdgeInsets.only(top: 55, right: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
                   children: [
-                    Text(
-                      'Барсик',
-                      style: TextStyle(
-                          fontSize: 30,
-                          fontFamily: 'Rahovets',
-                          color: HexColor("#FFB271")),
+                    Row(
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            GoRouter.of(context)
+                                .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                          },
+                          child: const Image(
+                            image: AssetImage('assets/left_button_game.png'),
+                            width: 72,
+                            height: 125,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 25),
+                    Row(
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            GoRouter.of(context)
+                                .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                          },
+                          child: const Image(
+                            image: AssetImage('assets/left_button_food.png'),
+                            width: 72,
+                            height: 125,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 25),
+                    Row(
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            GoRouter.of(context)
+                                .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                          },
+                          child: const Image(
+                            image: AssetImage('assets/left_button_movie.png'),
+                            width: 72,
+                            height: 125,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
-              ),
-              Row(
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(0),
+                      child: Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            InkWell(
+                              onTap: () {
+                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
+                                    .actionRoute); //потом поменять ссылку
+                              },
+                              child: const Image(
+                                image: AssetImage('assets/button_food.png'),
+                                width: 135,
+                                height: 80,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
+                                    .actionRoute); //потом поменять ссылку
+                              },
+                              child: const Image(
+                                image: AssetImage('assets/button_game.png'),
+                                width: 135,
+                                height: 80,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
+                                    .actionRoute); //потом поменять ссылку
+                              },
+                              child: const Image(
+                                image: AssetImage('assets/button_movie.png'),
+                                width: 135,
+                                height: 80,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            GoRouter.of(context)
+                                .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                          },
+                          child: const Image(
+                            image: AssetImage('assets/settings.png'),
+                            width: 90,
+                            height: 90,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            GoRouter.of(context)
+                                .pushNamed(MyAppRoutesConstants.ageSetRoute);
+                          },
+                          child: const Image(
+                            image: AssetImage('assets/sound.png'),
+                            width: 90,
+                            height: 90,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 103,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Stack(
                 children: [
-                  Padding(padding: const EdgeInsets.only(
-                      top: 0, left: 0, bottom: 0, right: 20),
-                    child: Expanded(child: Container(
-                        height: 170,
-                        width: 950,
-                        padding: const EdgeInsets.all(30),
+                  const Row(children: [
+                    Image(
+                      image: AssetImage('assets/cat_usual.png'),
+                      width: 287.09,
+                      height: 322,
+                    ),
+                  ]),
+                  Positioned(
+                    top: 150,
+                    left: 200,
+                    child: Container(
+                        height: 136,
+                        width: 825,
+                        padding: const EdgeInsets.only(left: 45, right: 45),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(60),
+                          borderRadius: BorderRadius.circular(15),
                         ),
                         child: RichText(
-                          text: TextSpan(
-                              text: 'Круто! Нажми',
-                              style: TextStyle(fontFamily: 'Bainsley',
-                                  fontSize: 27,
-                                  color: HexColor("#3E3A39")),
-                              children: <TextSpan>[
-                                TextSpan(text: ' зеленую кнопку',
-                                    style: TextStyle(fontFamily: 'Bainsley',
-                                        fontSize: 27,
-                                        color: HexColor("#45BEA1"))),
-                                TextSpan(text: ', чтобы пообедать или',
-                                    style: TextStyle(fontFamily: 'Bainsley',
-                                        fontSize: 27,
-                                        color: HexColor("#3E3A39"))),
-                                TextSpan(text: ' желтую кнопку',
-                                    style: TextStyle(fontFamily: 'Bainsley',
-                                        fontSize: 27,
-                                        color: HexColor("#DFA81C"))),
-                                TextSpan(text: ', чтобы поиграть!',
-                                    style: TextStyle(fontFamily: 'Bainsley',
-                                        fontSize: 27,
-                                        color: HexColor("#3E3A39")))
-                              ]
-                          ),
-                        )
-                      //Column(),
-                    )))],
-                    )],
+                            text: TextSpan(
+                                text: 'Превосходно! Нажми',
+                                style: TextStyle(
+                                    fontSize: 22,
+                                    color: HexColor("#3E3A39"),
+                                    fontFamily: 'Montserrat'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: ' зеленую кнопку',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 22,
+                                      color: HexColor("#1CEA56"))),
+                              TextSpan(
+                                  text:
+                                      ', чтобы покушать и зарядиться энергией,',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 22,
+                                      color: HexColor("#3E3A39"))),
+                              TextSpan(
+                                  text: ' оранжевую кнопку',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 22,
+                                      color: HexColor("#FF8E1F"))),
+                              TextSpan(
+                                  text:
+                                      ', чтобы окунуться в захватывающий мир развлечений, или',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 22,
+                                      color: HexColor("#3E3A39"))),
+                              TextSpan(
+                                  text: ' розовую кнопку',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 22,
+                                      color: HexColor("#F11D81"))),
+                              TextSpan(
+                                  text: ', чтобы я рассказал историю!',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 22,
+                                      color: HexColor("#3E3A39"))),
+                            ]))),
                   ),
                 ],
               )
-
-            ]),
+            ],
+          ),
+        ]),
       ),
     );
   }
-
 }

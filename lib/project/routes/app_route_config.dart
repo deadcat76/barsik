@@ -1,4 +1,5 @@
 import 'package:barsik/project/routes/app_route_constants.dart';
+import 'package:barsik/screens/ageEditScreen.dart';
 import 'package:barsik/screens/errorScreen.dart';
 import 'package:barsik/screens/homeScreen.dart';
 import 'package:barsik/screens/nameScreen.dart';
@@ -27,6 +28,12 @@ class MyAppRouter{
           path: '/age_set',
           pageBuilder: (context, state) {
             return const MaterialPage(child: AgeScreen());
+          }),
+      GoRoute(
+          name: MyAppRoutesConstants.ageEditRoute,
+          path: '/age_edit',
+          pageBuilder: (context, state) {
+            return const MaterialPage(child: AgeEditScreen());
           }),
       GoRoute(
           name: MyAppRoutesConstants.actionRoute,
