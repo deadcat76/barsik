@@ -1,5 +1,6 @@
 import 'package:barsik/project/routes/app_route_constants.dart';
 import 'package:barsik/widgets/reusable_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -13,6 +14,8 @@ class AgeScreen extends StatefulWidget {
 
 class _AgeScreenState extends State<AgeScreen> {
   final String assetName = 'assets/cat_smile.png';
+  // final String settings = 'assets/settings.png';
+  // final String sound = 'assets/sound.png';
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +25,31 @@ class _AgeScreenState extends State<AgeScreen> {
             image: DecorationImage(
                 image: AssetImage('assets/back_main.jpg'), fit: BoxFit.cover)),
         child: Column(children: <Widget>[
+          Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    GoRouter.of(context)
+                        .pushNamed(MyAppRoutesConstants.ageSetRoute);
+                  },
+                  child: const Image(
+                    image: AssetImage('assets/settings.png'),
+                    width: 80,
+                    height: 80,
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    GoRouter.of(context)
+                        .pushNamed(MyAppRoutesConstants.ageSetRoute);
+                  },
+                  child: const Image(
+                    image: AssetImage('assets/sound.png'),
+                    width: 80,
+                    height: 80,
+                  ),
+                ),
           Padding(
             padding:
                 const EdgeInsets.only(top: 350, bottom: 0, left: 0, right: 0),
@@ -145,7 +173,7 @@ class _AgeScreenState extends State<AgeScreen> {
             ],
           )
         ]),
-      ),
-    );
+      ]),
+    ));
   }
 }
