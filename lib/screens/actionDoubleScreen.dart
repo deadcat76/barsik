@@ -19,72 +19,76 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/back_main.jpg'), fit: BoxFit.cover)),
-        child: Column(children: <Widget>[
-
-          Padding(
-            padding: const EdgeInsets.only(top: 55, right: 25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            GoRouter.of(context)
-                                .pushNamed(MyAppRoutesConstants.ageEditRoute);
-                          },
-                          child: const Image(
-                            image: AssetImage('assets/left_button_game.png'),
-                            width: 72,
-                            height: 125,
-                          ),
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 55, right: 25),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Stack(
+                    children: [
+                      Positioned(
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    GoRouter.of(context)
+                                        .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                  },
+                                  child: const Image(
+                                    image: AssetImage('assets/left_button_game.png'),
+                                    width: 69.12,
+                                    height: 120,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    GoRouter.of(context)
+                                        .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                  },
+                                  child: const Image(
+                                    image: AssetImage('assets/left_button_food.png'),
+                                    width: 69.12,
+                                    height: 120,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    GoRouter.of(context)
+                                        .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                  },
+                                  child: const Image(
+                                    image: AssetImage('assets/left_button_movie.png'),
+                                    width: 69.12,
+                                    height: 120,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    const SizedBox(height: 25),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            GoRouter.of(context)
-                                .pushNamed(MyAppRoutesConstants.ageEditRoute);
-                          },
-                          child: const Image(
-                            image: AssetImage('assets/left_button_food.png'),
-                            width: 72,
-                            height: 125,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 25),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            GoRouter.of(context)
-                                .pushNamed(MyAppRoutesConstants.ageEditRoute);
-                          },
-                          child: const Image(
-                            image: AssetImage('assets/left_button_movie.png'),
-                            width: 72,
-                            height: 125,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Center(
+                      ),
+                      Padding(padding: const EdgeInsets.only(top: 280),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             InkWell(
                               onTap: () {
@@ -92,27 +96,13 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                                     .actionRoute); //потом поменять ссылку
                               },
                               child: const Image(
-                                image: AssetImage('assets/button_food.png'),
-                                width: 135,
-                                height: 80,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            InkWell(
-                              onTap: () {
-                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
-                                    .actionRoute); //потом поменять ссылку
-                              },
-                              child: const Image(
                                 image: AssetImage('assets/button_game.png'),
-                                width: 135,
+                                width: 130,
                                 height: 80,
                               ),
                             ),
                             const SizedBox(
-                              width: 20,
+                              width: 15,
                             ),
                             InkWell(
                               onTap: () {
@@ -121,137 +111,152 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                               },
                               child: const Image(
                                 image: AssetImage('assets/button_movie.png'),
-                                width: 135,
+                                width: 130,
+                                height: 80,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
+                                    .actionRoute); //потом поменять ссылку
+                              },
+                              child: const Image(
+                                image: AssetImage('assets/button_food.png'),
+                                width: 130,
                                 height: 80,
                               ),
                             ),
                           ],
-                        ),
+                        ),),
+                      Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  GoRouter.of(context)
+                                      .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                },
+                                child: const Image(
+                                  image: AssetImage('assets/settings.png'),
+                                  width: 90,
+                                  height: 90,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  GoRouter.of(context)
+                                      .pushNamed(MyAppRoutesConstants.ageSetRoute);
+                                },
+                                child: const Image(
+                                  image: AssetImage('assets/sound.png'),
+                                  width: 90,
+                                  height: 90,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            GoRouter.of(context)
-                                .pushNamed(MyAppRoutesConstants.ageEditRoute);
-                          },
-                          child: const Image(
-                            image: AssetImage('assets/settings.png'),
-                            width: 90,
-                            height: 90,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            GoRouter.of(context)
-                                .pushNamed(MyAppRoutesConstants.ageSetRoute);
-                          },
-                          child: const Image(
-                            image: AssetImage('assets/sound.png'),
-                            width: 90,
-                            height: 90,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 38,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Stack(
-                children: [
-                  const Row(children: [
-                    Image(
-                      image: AssetImage('assets/cat_usual.png'),
-                      width: 287.09,
-                      height: 322,
-                    ),
-                  ]),
-                  Positioned(
-                    top: 150,
-                    left: 200,
-                    child: Container(
-                        height: 136,
-                        width: 825,
-                        padding: const EdgeInsets.only(left: 45, right: 45),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: RichText(
-                            text: TextSpan(
-                                text: 'Превосходно! Нажми',
-                                style: TextStyle(
-                                    fontSize: 22,
-                                    color: HexColor("#3E3A39"),
-                                    fontFamily: 'Montserrat'),
-                                children: <TextSpan>[
-                                  TextSpan(
-                                      text: ' зеленую кнопку',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 22,
-                                          color: HexColor("#1CEA56"))),
-                                  TextSpan(
-                                      text:
-                                      ', чтобы покушать и зарядиться энергией,',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 22,
-                                          color: HexColor("#3E3A39"))),
-                                  TextSpan(
-                                      text: ' оранжевую кнопку',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 22,
-                                          color: HexColor("#FF8E1F"))),
-                                  TextSpan(
-                                      text:
-                                      ', чтобы окунуться в захватывающий мир развлечений, или',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 22,
-                                          color: HexColor("#3E3A39"))),
-                                  TextSpan(
-                                      text: ' розовую кнопку',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 22,
-                                          color: HexColor("#F11D81"))),
-                                  TextSpan(
-                                      text: ', чтобы я рассказал историю!',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 22,
-                                          color: HexColor("#3E3A39"))),
-                                ]))),
+                    ],
                   ),
                 ],
-              )
-            ],
-          ),
-        ]),
+              ),
+            ),
+
+            const SizedBox(
+              height: 63,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Stack(
+                  children: [
+                    const Row(children: [
+                      Image(
+                        image: AssetImage('assets/cat_usual.png'),
+                        width: 287.09,
+                        height: 317,
+                      ),
+                    ]),
+                    Positioned(
+                      top: 150,
+                      left: 200,
+                      child: Container(
+                          height: 134,
+                          width: 790,
+                          padding: const EdgeInsets.only(left: 45, right: 45),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: RichText(
+                              text: TextSpan(
+                                  text: 'Давай сделаем что-то интересное! Нажми',
+                                  style: TextStyle(
+                                      fontSize: 21,
+                                      color: HexColor("#3E3A39"),
+                                      fontFamily: 'Montserrat'),
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                        text: ' оранжевую кнопку',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 21,
+                                            color: HexColor("#FF8E1F"))),
+                                    TextSpan(
+                                        text:
+                                        ', чтобы поиграть в игры,',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 21,
+                                            color: HexColor("#3E3A39"))),
+                                    TextSpan(
+                                        text: ' розовую кнопку',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 21,
+                                            color: HexColor("#F11D81"))),
+                                    TextSpan(
+                                        text:
+                                        ', чтобы послушать увлекательную историю, или',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 21,
+                                            color: HexColor("#3E3A39"))),
+                                    TextSpan(
+                                        text: ' зеленую кнопку',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 21,
+                                            color: HexColor("#1CEA56"))),
+                                    TextSpan(
+                                        text: ', чтобы выбрать вкусняшки из меню.',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 21,
+                                            color: HexColor("#3E3A39"))),
+                                  ]))),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

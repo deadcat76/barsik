@@ -1,4 +1,5 @@
 import 'package:barsik/project/routes/app_route_constants.dart';
+import 'package:barsik/screens/GameChangeScreen.dart';
 import 'package:barsik/screens/actionDoubleScreen.dart';
 import 'package:barsik/screens/ageEditScreen.dart';
 import 'package:barsik/screens/errorScreen.dart';
@@ -44,9 +45,15 @@ class MyAppRouter{
           }),
       GoRoute(
           name: MyAppRoutesConstants.actionDoubleRoute,
-          path: '/action',
+          path: '/action_double',
           pageBuilder: (context, state) {
             return const MaterialPage(child: ActionDoubleScreen());
+          }),
+      GoRoute(
+          name: MyAppRoutesConstants.gameChangeRoute,
+          path: '/game_change',
+          pageBuilder: (context, state) {
+            return const MaterialPage(child: GameChangeScreen());
           }),
     ],
     errorPageBuilder: (context, state) {
