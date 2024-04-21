@@ -38,7 +38,7 @@ class _ActionScreenState extends State<ActionScreen> {
                                 InkWell(
                                   onTap: () {
                                     GoRouter.of(context)
-                                        .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                        .pushNamed(MyAppRoutesConstants.gameChangeRoute);
                                   },
                                   child: const Image(
                                     image: AssetImage('assets/left_button_game.png'),
@@ -74,7 +74,7 @@ class _ActionScreenState extends State<ActionScreen> {
                                 InkWell(
                                   onTap: () {
                                     GoRouter.of(context)
-                                        .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                        .pushNamed(MyAppRoutesConstants.movieChangeRoute);
                                   },
                                   child: const Image(
                                     image: AssetImage('assets/left_button_movie.png'),
@@ -109,7 +109,7 @@ class _ActionScreenState extends State<ActionScreen> {
                             InkWell(
                               onTap: () {
                                 GoRouter.of(context).pushNamed(MyAppRoutesConstants
-                                    .gameChangeRoute); //потом поменять ссылку
+                                    .gameChangeRoute);
                               },
                               child: const Image(
                                 image: AssetImage('assets/button_game.png'),
@@ -123,7 +123,7 @@ class _ActionScreenState extends State<ActionScreen> {
                             InkWell(
                               onTap: () {
                                 GoRouter.of(context).pushNamed(MyAppRoutesConstants
-                                    .actionRoute); //потом поменять ссылку
+                                    .movieChangeRoute);
                               },
                               child: const Image(
                                 image: AssetImage('assets/button_movie.png'),

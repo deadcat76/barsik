@@ -1,4 +1,5 @@
 import 'package:barsik/project/routes/app_route_constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -33,7 +34,7 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                 InkWell(
                                   onTap: () {
                                     GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.ageEditRoute);
+                                        MyAppRoutesConstants.gameChangeRoute);
                                   },
                                   child: const Image(
                                     image: AssetImage(
@@ -71,7 +72,7 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                 InkWell(
                                   onTap: () {
                                     GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.ageEditRoute);
+                                        MyAppRoutesConstants.movieChangeRoute);
                                   },
                                   child: const Image(
                                     image: AssetImage(
@@ -85,60 +86,111 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                           ],
                         ),
                       ),
-                      const Text('ИГРЫ С БАРСИКОМ',
-                          style: TextStyle(
-                            fontFamily: 'Inter',
-                            fontSize: 80,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                          )),
                       Padding(
-                        padding: const EdgeInsets.only(top: 280),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            InkWell(
-                              onTap: () {
-                                GoRouter.of(context).pushNamed(
-                                    MyAppRoutesConstants
-                                        .actionRoute); //потом поменять ссылку
-                              },
-                              child: const Image(
-                                image: AssetImage('assets/button_food.png'),
-                                width: 130,
-                                height: 80,
-                              ),
+                        padding: const EdgeInsets.only(left: 110),
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text('ИГРЫ С БАРСИКОМ',
+                                    style: TextStyle(
+                                      fontFamily: 'Inter',
+                                      fontSize: 80,
+                                      fontWeight: FontWeight.w900,
+                                      color: HexColor('#F4E6C6'),
+                                    )),
+                              ],
                             ),
                             const SizedBox(
-                              width: 15,
+                              height: 20,
                             ),
-                            InkWell(
-                              onTap: () {
-                                GoRouter.of(context).pushNamed(
-                                    MyAppRoutesConstants
-                                        .actionRoute); //потом поменять ссылку
-                              },
-                              child: const Image(
-                                image: AssetImage('assets/button_game.png'),
-                                width: 130,
-                                height: 80,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            InkWell(
-                              onTap: () {
-                                GoRouter.of(context).pushNamed(
-                                    MyAppRoutesConstants
-                                        .actionRoute); //потом поменять ссылку
-                              },
-                              child: const Image(
-                                image: AssetImage('assets/button_movie.png'),
-                                width: 130,
-                                height: 80,
-                              ),
+                            Row(
+                              children: [
+                                Column(
+                                  children: [
+                                    InkWell(
+                                      onTap: () {
+                                        GoRouter.of(context).pushNamed(
+                                            MyAppRoutesConstants.actionDoubleRoute);
+                                      },
+                                      child: const Image(
+                                        image: AssetImage('assets/game1.png'),
+                                        width: 335,
+                                        height: 193,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 15,
+                                    ),
+                                    Text(
+                                      'Прятки с Барсиком',
+                                      style: TextStyle(
+                                          fontFamily: 'Inter',
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                          color: HexColor('#F4E6C7')),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  children: [
+                                    InkWell(
+                                      onTap: () {
+                                        GoRouter.of(context).pushNamed(
+                                            MyAppRoutesConstants.actionDoubleRoute);
+                                      },
+                                      child: const Image(
+                                        image: AssetImage('assets/game2.png'),
+                                        width: 335,
+                                        height: 193,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 15,
+                                    ),
+                                    Text(
+                                      'Считалка с Барсиком',
+                                      style: TextStyle(
+                                          fontFamily: 'Inter',
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                          color: HexColor('#F4E6C7')),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  children: [
+                                    InkWell(
+                                      onTap: () {
+                                        GoRouter.of(context).pushNamed(
+                                            MyAppRoutesConstants.actionDoubleRoute);
+                                      },
+                                      child: const Image(
+                                        image: AssetImage('assets/game3.png'),
+                                        width: 335,
+                                        height: 193,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 15,
+                                    ),
+                                    Text(
+                                      'Раскраска с Барсиком',
+                                      style: TextStyle(
+                                          fontFamily: 'Inter',
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                          color: HexColor('#F4E6C7')),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -185,7 +237,7 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
               ),
             ),
             const SizedBox(
-              height: 63,
+              height: 68,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -215,7 +267,7 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                   shape: MaterialStateProperty.all(
                                       RoundedRectangleBorder(
                                           borderRadius:
-                                          BorderRadius.circular(12),
+                                              BorderRadius.circular(12),
                                           side: const BorderSide(
                                               color: Colors.white,
                                               width: 4.0)))),
@@ -249,40 +301,40 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                           child: RichText(
                               text: TextSpan(
                                   text:
-                                  'Здорово, хочешь сыграть в игру? Нажми на одну из',
+                                      'Здорово, хочешь сыграть в игру? Нажми на одну из',
                                   style: TextStyle(
                                       fontSize: 21,
                                       color: HexColor("#3E3A39"),
                                       fontFamily: 'Montserrat'),
                                   children: <TextSpan>[
-                                    TextSpan(
-                                        text: ' красных кнопок',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                            color: HexColor("#FF381E"))),
-                                    TextSpan(
-                                        text:
+                                TextSpan(
+                                    text: ' красных кнопок',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 21,
+                                        color: HexColor("#FF381E"))),
+                                TextSpan(
+                                    text:
                                         ', и я расскажу тебе об этой захватывающей игре! Или, если хочешь заняться чем-нибудь другим, нажми',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 21,
-                                            color: HexColor("#3E3A39"))),
-                                    TextSpan(
-                                        text: ' голубую кнопку',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                            color: HexColor("#20BBDF"))),
-                                    TextSpan(
-                                        text: '.',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 21,
-                                            color: HexColor("#3E3A39"))),
-                                  ]))),
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 21,
+                                        color: HexColor("#3E3A39"))),
+                                TextSpan(
+                                    text: ' голубую кнопку',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 21,
+                                        color: HexColor("#20BBDF"))),
+                                TextSpan(
+                                    text: '.',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 21,
+                                        color: HexColor("#3E3A39"))),
+                              ]))),
                     ),
                   ],
                 )

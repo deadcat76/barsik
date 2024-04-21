@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class GameChangeScreen extends StatefulWidget {
-  const GameChangeScreen({super.key});
+class MovieChangeScreen extends StatefulWidget {
+  const MovieChangeScreen({super.key});
 
   @override
-  State<GameChangeScreen> createState() => _GameChangeScreenState();
+  State<MovieChangeScreen> createState() => _MovieChangeScreenState();
 }
 
-class _GameChangeScreenState extends State<GameChangeScreen> {
+class _MovieChangeScreenState extends State<MovieChangeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +38,7 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                   },
                                   child: const Image(
                                     image: AssetImage(
-                                        'assets/left_button_game_active.png'),
+                                        'assets/left_button_game.png'),
                                     width: 69.12,
                                     height: 120,
                                   ),
@@ -76,7 +76,7 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                   },
                                   child: const Image(
                                     image: AssetImage(
-                                        'assets/left_button_movie.png'),
+                                        'assets/left_button_movie_active.png'),
                                     width: 69.12,
                                     height: 120,
                                   ),
@@ -92,7 +92,7 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                           children: [
                             Row(
                               children: [
-                                Text('ИГРЫ С БАРСИКОМ',
+                                Text('СКАЗКИ С БАРСИКОМ',
                                     style: TextStyle(
                                       fontFamily: 'Inter',
                                       fontSize: 80,
@@ -105,6 +105,8 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                               height: 20,
                             ),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Column(
                                   children: [
@@ -114,74 +116,16 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                             MyAppRoutesConstants.actionDoubleRoute);
                                       },
                                       child: const Image(
-                                        image: AssetImage('assets/game1.png'),
-                                        width: 335,
-                                        height: 193,
+                                        image: AssetImage('assets/movie1.png'),
+                                        width: 490,
+                                        height: 272,
                                       ),
                                     ),
                                     const SizedBox(
                                       height: 15,
                                     ),
                                     Text(
-                                      'Прятки с Барсиком',
-                                      style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold,
-                                          color: HexColor('#F4E6C7')),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                Column(
-                                  children: [
-                                    InkWell(
-                                      onTap: () {
-                                        GoRouter.of(context).pushNamed(
-                                            MyAppRoutesConstants.actionDoubleRoute);
-                                      },
-                                      child: const Image(
-                                        image: AssetImage('assets/game2.png'),
-                                        width: 335,
-                                        height: 193,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 15,
-                                    ),
-                                    Text(
-                                      'Считалка с Барсиком',
-                                      style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold,
-                                          color: HexColor('#F4E6C7')),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                Column(
-                                  children: [
-                                    InkWell(
-                                      onTap: () {
-                                        GoRouter.of(context).pushNamed(
-                                            MyAppRoutesConstants.actionDoubleRoute);
-                                      },
-                                      child: const Image(
-                                        image: AssetImage('assets/game3.png'),
-                                        width: 335,
-                                        height: 193,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 15,
-                                    ),
-                                    Text(
-                                      'Раскраска с Барсиком',
+                                      'Появление Барсика в ресторане',
                                       style: TextStyle(
                                           fontFamily: 'Inter',
                                           fontSize: 30,
@@ -237,7 +181,7 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
               ),
             ),
             const SizedBox(
-              height: 68,
+              height: 4,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -267,7 +211,7 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                   shape: MaterialStateProperty.all(
                                       RoundedRectangleBorder(
                                           borderRadius:
-                                              BorderRadius.circular(12),
+                                          BorderRadius.circular(12),
                                           side: const BorderSide(
                                               color: Colors.white,
                                               width: 4.0)))),
@@ -301,40 +245,40 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                           child: RichText(
                               text: TextSpan(
                                   text:
-                                      'Здорово, хочешь сыграть в игру? Нажми на одну из',
+                                  'Здорово, хочешь сыграть в игру? Нажми на одну из',
                                   style: TextStyle(
                                       fontSize: 21,
                                       color: HexColor("#3E3A39"),
                                       fontFamily: 'Montserrat'),
                                   children: <TextSpan>[
-                                TextSpan(
-                                    text: ' красных кнопок',
-                                    style: TextStyle(
-                                        fontFamily: 'Montserrat',
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 21,
-                                        color: HexColor("#FF381E"))),
-                                TextSpan(
-                                    text:
+                                    TextSpan(
+                                        text: ' красных кнопок',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 21,
+                                            color: HexColor("#FF381E"))),
+                                    TextSpan(
+                                        text:
                                         ', и я расскажу тебе об этой захватывающей игре! Или, если хочешь заняться чем-нибудь другим, нажми',
-                                    style: TextStyle(
-                                        fontFamily: 'Montserrat',
-                                        fontSize: 21,
-                                        color: HexColor("#3E3A39"))),
-                                TextSpan(
-                                    text: ' голубую кнопку',
-                                    style: TextStyle(
-                                        fontFamily: 'Montserrat',
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 21,
-                                        color: HexColor("#20BBDF"))),
-                                TextSpan(
-                                    text: '.',
-                                    style: TextStyle(
-                                        fontFamily: 'Montserrat',
-                                        fontSize: 21,
-                                        color: HexColor("#3E3A39"))),
-                              ]))),
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 21,
+                                            color: HexColor("#3E3A39"))),
+                                    TextSpan(
+                                        text: ' голубую кнопку',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 21,
+                                            color: HexColor("#20BBDF"))),
+                                    TextSpan(
+                                        text: '.',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 21,
+                                            color: HexColor("#3E3A39"))),
+                                  ]))),
                     ),
                   ],
                 )
