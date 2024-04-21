@@ -6,6 +6,5 @@ class MyAppRoutesConstants{
   static const String ageEditRoute = 'age_edit';
   static const String actionRoute = 'action';
   static const String actionDoubleRoute = 'action_double';
-
-
+  static const String gameChangeRoute = 'game_change';
 }

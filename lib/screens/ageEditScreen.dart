@@ -149,8 +149,8 @@ class _AgeEditScreenState extends State<AgeEditScreen> {
                     top: 150,
                     left: 200,
                     child: Container(
-                        height: 136,
-                        width: 825,
+                        height: 134,
+                        width: 790,
                         padding: const EdgeInsets.only(left: 45, right: 45),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
@@ -162,7 +162,7 @@ class _AgeEditScreenState extends State<AgeEditScreen> {
                                 text:
                                 'Неправильно указал свой возраст? Ничего страшного! Давай его изменим. Нажми',
                                 style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 21,
                                     color: HexColor("#3E3A39"),
                                     fontFamily: 'Montserrat'),
                                 children: <TextSpan>[
@@ -171,26 +171,26 @@ class _AgeEditScreenState extends State<AgeEditScreen> {
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 22,
+                                          fontSize: 21,
                                           color: HexColor("#1CEA56"))),
                                   TextSpan(
                                       text: ', если тебе до 5 лет, или',
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
-                                          fontSize: 22,
+                                          fontSize: 21,
                                           color: HexColor("#3E3A39"))),
                                   TextSpan(
                                       text: ' оранжевую кнопку',
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 22,
+                                          fontSize: 21,
                                           color: HexColor("#FF8E1F"))),
                                   TextSpan(
                                       text: ', если тебе от 5 до 7 лет, и мы продолжим играть!',
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
-                                          fontSize: 22,
+                                          fontSize: 21,
                                           color: HexColor("#3E3A39"))),
                                 ]))
                     ),

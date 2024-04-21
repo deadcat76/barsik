@@ -1,24 +1,21 @@
 import 'package:barsik/project/routes/app_route_constants.dart';
-import 'package:barsik/widgets/reusable_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class ActionDoubleScreen extends StatefulWidget {
-  const ActionDoubleScreen({super.key});
+class GameChangeScreen extends StatefulWidget {
+  const GameChangeScreen({super.key});
 
   @override
-  State<ActionDoubleScreen> createState() => _ActionDoubleScreenState();
+  State<GameChangeScreen> createState() => _GameChangeScreenState();
 }
 
-class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
+class _GameChangeScreenState extends State<GameChangeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/back_main.jpg'), fit: BoxFit.cover)),
+        color: HexColor("#558384"),
         child: Column(
           children: <Widget>[
             Padding(
@@ -35,11 +32,12 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                               children: [
                                 InkWell(
                                   onTap: () {
-                                    GoRouter.of(context)
-                                        .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.ageEditRoute);
                                   },
                                   child: const Image(
-                                    image: AssetImage('assets/left_button_game.png'),
+                                    image: AssetImage(
+                                        'assets/left_button_game_active.png'),
                                     width: 69.12,
                                     height: 120,
                                   ),
@@ -53,11 +51,12 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                               children: [
                                 InkWell(
                                   onTap: () {
-                                    GoRouter.of(context)
-                                        .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.ageEditRoute);
                                   },
                                   child: const Image(
-                                    image: AssetImage('assets/left_button_food.png'),
+                                    image: AssetImage(
+                                        'assets/left_button_food.png'),
                                     width: 69.12,
                                     height: 120,
                                   ),
@@ -71,11 +70,12 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                               children: [
                                 InkWell(
                                   onTap: () {
-                                    GoRouter.of(context)
-                                        .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.ageEditRoute);
                                   },
                                   child: const Image(
-                                    image: AssetImage('assets/left_button_movie.png'),
+                                    image: AssetImage(
+                                        'assets/left_button_movie.png'),
                                     width: 69.12,
                                     height: 120,
                                   ),
@@ -85,15 +85,39 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                           ],
                         ),
                       ),
-                      Padding(padding: const EdgeInsets.only(top: 280),
+                      const Text('ИГРЫ С БАРСИКОМ',
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 80,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                          )),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 280),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             InkWell(
                               onTap: () {
-                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
-                                    .actionRoute); //потом поменять ссылку
+                                GoRouter.of(context).pushNamed(
+                                    MyAppRoutesConstants
+                                        .actionRoute); //потом поменять ссылку
+                              },
+                              child: const Image(
+                                image: AssetImage('assets/button_food.png'),
+                                width: 130,
+                                height: 80,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                GoRouter.of(context).pushNamed(
+                                    MyAppRoutesConstants
+                                        .actionRoute); //потом поменять ссылку
                               },
                               child: const Image(
                                 image: AssetImage('assets/button_game.png'),
@@ -106,8 +130,9 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                             ),
                             InkWell(
                               onTap: () {
-                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
-                                    .actionRoute); //потом поменять ссылку
+                                GoRouter.of(context).pushNamed(
+                                    MyAppRoutesConstants
+                                        .actionRoute); //потом поменять ссылку
                               },
                               child: const Image(
                                 image: AssetImage('assets/button_movie.png'),
@@ -115,22 +140,9 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                                 height: 80,
                               ),
                             ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            InkWell(
-                              onTap: () {
-                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
-                                    .actionRoute); //потом поменять ссылку
-                              },
-                              child: const Image(
-                                image: AssetImage('assets/button_food.png'),
-                                width: 130,
-                                height: 80,
-                              ),
-                            ),
                           ],
-                        ),),
+                        ),
+                      ),
                       Column(
                         children: [
                           Row(
@@ -138,8 +150,8 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  GoRouter.of(context)
-                                      .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                  GoRouter.of(context).pushNamed(
+                                      MyAppRoutesConstants.ageEditRoute);
                                 },
                                 child: const Image(
                                   image: AssetImage('assets/settings.png'),
@@ -154,8 +166,8 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  GoRouter.of(context)
-                                      .pushNamed(MyAppRoutesConstants.ageSetRoute);
+                                  GoRouter.of(context).pushNamed(
+                                      MyAppRoutesConstants.ageSetRoute);
                                 },
                                 child: const Image(
                                   image: AssetImage('assets/sound.png'),
@@ -172,7 +184,6 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                 ],
               ),
             ),
-
             const SizedBox(
               height: 63,
             ),
@@ -181,13 +192,48 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
               children: [
                 Stack(
                   children: [
-                    const Row(children: [
-                      Image(
-                        image: AssetImage('assets/cat_usual.png'),
-                        width: 287.09,
-                        height: 317,
-                      ),
-                    ]),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Image(
+                            image: AssetImage('assets/cat_usual.png'),
+                            width: 287.09,
+                            height: 317,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 200, right: 90),
+                            child: ElevatedButton(
+                              style: ButtonStyle(
+                                  fixedSize: MaterialStateProperty.all(
+                                      const Size(184, 49)),
+                                  backgroundColor: MaterialStateProperty.all(
+                                      HexColor("#20BBDF")),
+                                  textStyle: MaterialStateProperty.all(
+                                      const TextStyle(color: Colors.white)),
+                                  padding: MaterialStateProperty.all(
+                                      const EdgeInsets.all(0)),
+                                  shape: MaterialStateProperty.all(
+                                      RoundedRectangleBorder(
+                                          borderRadius:
+                                          BorderRadius.circular(12),
+                                          side: const BorderSide(
+                                              color: Colors.white,
+                                              width: 4.0)))),
+                              onPressed: () {
+                                GoRouter.of(context).pushNamed(
+                                    MyAppRoutesConstants.actionDoubleRoute);
+                              },
+                              child: const Text(
+                                'Назад',
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontFamily: 'Montserrat',
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                            ),
+                          )
+                        ]),
                     Positioned(
                       top: 150,
                       left: 200,
@@ -202,49 +248,36 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                           ),
                           child: RichText(
                               text: TextSpan(
-                                  text: 'Давай сделаем что-то интересное! Нажми',
+                                  text:
+                                  'Здорово, хочешь сыграть в игру? Нажми на одну из',
                                   style: TextStyle(
                                       fontSize: 21,
                                       color: HexColor("#3E3A39"),
                                       fontFamily: 'Montserrat'),
                                   children: <TextSpan>[
                                     TextSpan(
-                                        text: ' оранжевую кнопку',
+                                        text: ' красных кнопок',
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
                                             fontWeight: FontWeight.bold,
                                             fontSize: 21,
-                                            color: HexColor("#FF8E1F"))),
+                                            color: HexColor("#FF381E"))),
                                     TextSpan(
                                         text:
-                                        ', чтобы поиграть в игры,',
+                                        ', и я расскажу тебе об этой захватывающей игре! Или, если хочешь заняться чем-нибудь другим, нажми',
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
                                             fontSize: 21,
                                             color: HexColor("#3E3A39"))),
                                     TextSpan(
-                                        text: ' розовую кнопку',
+                                        text: ' голубую кнопку',
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
                                             fontWeight: FontWeight.bold,
                                             fontSize: 21,
-                                            color: HexColor("#F11D81"))),
+                                            color: HexColor("#20BBDF"))),
                                     TextSpan(
-                                        text:
-                                        ', чтобы послушать увлекательную историю, или',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 21,
-                                            color: HexColor("#3E3A39"))),
-                                    TextSpan(
-                                        text: ' зеленую кнопку',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                            color: HexColor("#1CEA56"))),
-                                    TextSpan(
-                                        text: ', чтобы выбрать вкусняшки из меню.',
+                                        text: '.',
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
                                             fontSize: 21,

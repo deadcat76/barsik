@@ -70,13 +70,13 @@ class _AgeScreenState extends State<AgeScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                            MaterialStateProperty.all(const Size(320, 80)),
+                        MaterialStateProperty.all(const Size(320, 80)),
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("#1CEA56")),
+                        MaterialStateProperty.all(HexColor("#1CEA56")),
                         textStyle: MaterialStateProperty.all(
                             const TextStyle(color: Colors.white)),
                         padding:
-                            MaterialStateProperty.all(const EdgeInsets.all(20)),
+                        MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                             side: const BorderSide(
@@ -100,13 +100,13 @@ class _AgeScreenState extends State<AgeScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                            MaterialStateProperty.all(const Size(320, 80)),
+                        MaterialStateProperty.all(const Size(320, 80)),
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("#FF8E1F")),
+                        MaterialStateProperty.all(HexColor("#FF8E1F")),
                         textStyle: MaterialStateProperty.all(
                             const TextStyle(color: Colors.white)),
                         padding:
-                            MaterialStateProperty.all(const EdgeInsets.all(20)),
+                        MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                             side: const BorderSide(
@@ -137,20 +137,20 @@ class _AgeScreenState extends State<AgeScreen> {
               Stack(
                 children: [
                   const Row(
-                    children: [
-                      Image(
-                        image: AssetImage('assets/cat_smile.png'),
-                        width: 287.09,
-                        height: 317,
-                      ),
-                    ]
+                      children: [
+                        Image(
+                          image: AssetImage('assets/cat_smile.png'),
+                          width: 287.09,
+                          height: 317,
+                        ),
+                      ]
                   ),
                   Positioned(
                     top: 150,
                     left: 200,
                     child: Container(
-                        height: 136,
-                        width: 825,
+                        height: 134,
+                        width: 790,
                         padding: const EdgeInsets.only(left: 45, right: 45),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
@@ -162,7 +162,7 @@ class _AgeScreenState extends State<AgeScreen> {
                                 text:
                                 'Привет, друг! Я Барсик! Рад приветствовать тебя в нашем веселом мире развлечений! Скажи, пожалуйста, сколько тебе лет? Нажми',
                                 style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 21,
                                     color: HexColor("#3E3A39"),
                                     fontFamily: 'Montserrat'),
                                 children: <TextSpan>[
@@ -171,26 +171,26 @@ class _AgeScreenState extends State<AgeScreen> {
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 22,
+                                          fontSize: 21,
                                           color: HexColor("#1CEA56"))),
                                   TextSpan(
                                       text: ', если тебе до 5 лет, или',
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
-                                          fontSize: 22,
+                                          fontSize: 21,
                                           color: HexColor("#3E3A39"))),
                                   TextSpan(
                                       text: ' оранжевую кнопку',
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 22,
+                                          fontSize: 21,
                                           color: HexColor("#FF8E1F"))),
                                   TextSpan(
                                       text: ', если тебе от 5 до 7 лет.',
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
-                                          fontSize: 22,
+                                          fontSize: 21,
                                           color: HexColor("#3E3A39"))),
                                 ]))
                     ),
