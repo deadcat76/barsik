@@ -3,6 +3,7 @@ import 'package:barsik/screens/GameChangeScreen.dart';
 import 'package:barsik/screens/actionDoubleScreen.dart';
 import 'package:barsik/screens/ageEditScreen.dart';
 import 'package:barsik/screens/errorScreen.dart';
+import 'package:barsik/screens/gameChangeScreen.dart';
 import 'package:barsik/screens/homeScreen.dart';
 import 'package:barsik/screens/nameScreen.dart';
 import 'package:barsik/screens/ageScreen.dart';

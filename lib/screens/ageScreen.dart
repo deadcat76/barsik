@@ -70,13 +70,13 @@ class _AgeScreenState extends State<AgeScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                            MaterialStateProperty.all(const Size(320, 80)),
+                        MaterialStateProperty.all(const Size(320, 80)),
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("#1CEA56")),
+                        MaterialStateProperty.all(HexColor("#1CEA56")),
                         textStyle: MaterialStateProperty.all(
                             const TextStyle(color: Colors.white)),
                         padding:
-                            MaterialStateProperty.all(const EdgeInsets.all(20)),
+                        MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                             side: const BorderSide(
@@ -100,13 +100,13 @@ class _AgeScreenState extends State<AgeScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                            MaterialStateProperty.all(const Size(320, 80)),
+                        MaterialStateProperty.all(const Size(320, 80)),
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("#FF8E1F")),
+                        MaterialStateProperty.all(HexColor("#FF8E1F")),
                         textStyle: MaterialStateProperty.all(
                             const TextStyle(color: Colors.white)),
                         padding:
-                            MaterialStateProperty.all(const EdgeInsets.all(20)),
+                        MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                             side: const BorderSide(
@@ -137,13 +137,13 @@ class _AgeScreenState extends State<AgeScreen> {
               Stack(
                 children: [
                   const Row(
-                    children: [
-                      Image(
-                        image: AssetImage('assets/cat_smile.png'),
-                        width: 287.09,
-                        height: 317,
-                      ),
-                    ]
+                      children: [
+                        Image(
+                          image: AssetImage('assets/cat_smile.png'),
+                          width: 287.09,
+                          height: 317,
+                        ),
+                      ]
                   ),
                   Positioned(
                     top: 150,
