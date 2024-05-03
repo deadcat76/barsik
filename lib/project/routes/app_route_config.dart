@@ -15,11 +15,11 @@ class MyAppRouter{
   GoRouter router = GoRouter(
     routes: [
       GoRoute(
-      name: MyAppRoutesConstants.homeRouteName,
-      path: '/',
-      pageBuilder: (context,state) {
-        return const MaterialPage(child: Home()); //страница по умолчанию
-      }),
+          name: MyAppRoutesConstants.homeRouteName,
+          path: '/',
+          pageBuilder: (context, state) {
+            return const MaterialPage(child: Home());
+          }),
       GoRoute(
         name: MyAppRoutesConstants.nameSetRoute,
         path: '/name_set',
@@ -27,44 +27,124 @@ class MyAppRouter{
           return const MaterialPage(child: NameScreen());
         }),
       GoRoute(
-          name: MyAppRoutesConstants.ageSetRoute,
-          path: '/age_set',
-          pageBuilder: (context, state) {
-            return const MaterialPage(child: AgeScreen());
-          }),
+        name: MyAppRoutesConstants.ageSetRoute,
+        path: '/age_set',
+        pageBuilder: (context, state) {
+          return CustomTransitionPage(
+            transitionDuration: const Duration(milliseconds: 500),
+            fullscreenDialog: true,
+            key: state.pageKey,
+            child: const AgeScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                child: child,
+              );
+            },
+          );
+        },
+      ),
       GoRoute(
           name: MyAppRoutesConstants.ageEditRoute,
           path: '/age_edit',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: AgeEditScreen());
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 500),
+              fullscreenDialog: true,
+              key: state.pageKey,
+              child: const AgeEditScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
           }),
       GoRoute(
           name: MyAppRoutesConstants.actionRoute,
           path: '/action',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: ActionScreen());
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 500),
+              fullscreenDialog: true,
+              key: state.pageKey,
+              child: const ActionScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
           }),
       GoRoute(
           name: MyAppRoutesConstants.actionDoubleRoute,
           path: '/action_double',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: ActionDoubleScreen());
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 500),
+              fullscreenDialog: true,
+              key: state.pageKey,
+              child: const ActionDoubleScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
           }),
       GoRoute(
           name: MyAppRoutesConstants.gameChangeRoute,
           path: '/game_change',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: GameChangeScreen());
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 500),
+              fullscreenDialog: true,
+              key: state.pageKey,
+              child: const GameChangeScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
           }),
       GoRoute(
           name: MyAppRoutesConstants.movieChangeRoute,
           path: '/movie_change',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: MovieChangeScreen());
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 500),
+              fullscreenDialog: true,
+              key: state.pageKey,
+              child: const MovieChangeScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
           }),
     ],
     errorPageBuilder: (context, state) {
-      return const MaterialPage(child: ErrorScreen());
+      return CustomTransitionPage(
+        transitionDuration: const Duration(milliseconds: 500),
+        fullscreenDialog: true,
+        key: state.pageKey,
+        child: const ErrorScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(
+            opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+            child: child,
+          );
+        },
+      );
     }
   );
+
 }
+

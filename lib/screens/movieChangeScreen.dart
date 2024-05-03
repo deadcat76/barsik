@@ -94,7 +94,7 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                               children: [
                                 Text('СКАЗКИ С БАРСИКОМ',
                                     style: TextStyle(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'InterExtraBold',
                                       fontSize: 80,
                                       fontWeight: FontWeight.w900,
                                       color: HexColor('#F4E6C6'),
