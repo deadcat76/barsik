@@ -37,11 +37,12 @@ class _ActionScreenState extends State<ActionScreen> {
                               children: [
                                 InkWell(
                                   onTap: () {
-                                    GoRouter.of(context)
-                                        .pushNamed(MyAppRoutesConstants.gameChangeRoute);
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.gameChangeRoute);
                                   },
                                   child: const Image(
-                                    image: AssetImage('assets/left_button_game.png'),
+                                    image: AssetImage(
+                                        'assets/left_button_game.png'),
                                     width: 69.12,
                                     height: 120,
                                   ),
@@ -55,11 +56,12 @@ class _ActionScreenState extends State<ActionScreen> {
                               children: [
                                 InkWell(
                                   onTap: () {
-                                    GoRouter.of(context)
-                                        .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.ageEditRoute);
                                   },
                                   child: const Image(
-                                    image: AssetImage('assets/left_button_food.png'),
+                                    image: AssetImage(
+                                        'assets/left_button_food.png'),
                                     width: 69.12,
                                     height: 120,
                                   ),
@@ -73,11 +75,12 @@ class _ActionScreenState extends State<ActionScreen> {
                               children: [
                                 InkWell(
                                   onTap: () {
-                                    GoRouter.of(context)
-                                        .pushNamed(MyAppRoutesConstants.movieChangeRoute);
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.movieChangeRoute);
                                   },
                                   child: const Image(
-                                    image: AssetImage('assets/left_button_movie.png'),
+                                    image: AssetImage(
+                                        'assets/left_button_movie.png'),
                                     width: 69.12,
                                     height: 120,
                                   ),
@@ -87,15 +90,17 @@ class _ActionScreenState extends State<ActionScreen> {
                           ],
                         ),
                       ),
-                      Padding(padding: const EdgeInsets.only(top: 280),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 280),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             InkWell(
                               onTap: () {
-                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
-                                    .actionRoute); //потом поменять ссылку
+                                GoRouter.of(context).pushNamed(
+                                    MyAppRoutesConstants
+                                        .actionRoute); //потом поменять ссылку
                               },
                               child: const Image(
                                 image: AssetImage('assets/button_food.png'),
@@ -108,8 +113,8 @@ class _ActionScreenState extends State<ActionScreen> {
                             ),
                             InkWell(
                               onTap: () {
-                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
-                                    .gameChangeRoute);
+                                GoRouter.of(context).pushNamed(
+                                    MyAppRoutesConstants.gameChangeRoute);
                               },
                               child: const Image(
                                 image: AssetImage('assets/button_game.png'),
@@ -122,8 +127,8 @@ class _ActionScreenState extends State<ActionScreen> {
                             ),
                             InkWell(
                               onTap: () {
-                                GoRouter.of(context).pushNamed(MyAppRoutesConstants
-                                    .movieChangeRoute);
+                                GoRouter.of(context).pushNamed(
+                                    MyAppRoutesConstants.movieChangeRoute);
                               },
                               child: const Image(
                                 image: AssetImage('assets/button_movie.png'),
@@ -132,7 +137,8 @@ class _ActionScreenState extends State<ActionScreen> {
                               ),
                             ),
                           ],
-                        ),),
+                        ),
+                      ),
                       Column(
                         children: [
                           Row(
@@ -140,8 +146,8 @@ class _ActionScreenState extends State<ActionScreen> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  GoRouter.of(context)
-                                      .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                                  GoRouter.of(context).pushNamed(
+                                      MyAppRoutesConstants.ageEditRoute);
                                 },
                                 child: const Image(
                                   image: AssetImage('assets/settings.png'),
@@ -156,8 +162,8 @@ class _ActionScreenState extends State<ActionScreen> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  GoRouter.of(context)
-                                      .pushNamed(MyAppRoutesConstants.ageSetRoute);
+                                  GoRouter.of(context).pushNamed(
+                                      MyAppRoutesConstants.ageSetRoute);
                                 },
                                 child: const Image(
                                   image: AssetImage('assets/sound.png'),
@@ -174,7 +180,6 @@ class _ActionScreenState extends State<ActionScreen> {
                 ],
               ),
             ),
-
             const SizedBox(
               height: 63,
             ),
@@ -206,52 +211,53 @@ class _ActionScreenState extends State<ActionScreen> {
                               text: TextSpan(
                                   text: 'Превосходно! Нажми',
                                   style: TextStyle(
-                                      fontSize: 21,
-                                      color: HexColor("#3E3A39"),
-                                      fontFamily: 'Montserrat'),
+                                    fontSize: 21,
+                                    color: HexColor("#3E3A39"),
+                                    fontFamily: 'Montserrat',
+                                  ),
                                   children: <TextSpan>[
-                                    TextSpan(
-                                        text: ' зеленую кнопку',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                            color: HexColor("#1CEA56"))),
-                                    TextSpan(
-                                        text:
+                                TextSpan(
+                                    text: ' зеленую кнопку',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 21,
+                                        color: HexColor("#1CEA56"))),
+                                TextSpan(
+                                    text:
                                         ', чтобы покушать и зарядиться энергией,',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 21,
-                                            color: HexColor("#3E3A39"))),
-                                    TextSpan(
-                                        text: ' оранжевую кнопку',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                            color: HexColor("#FF8E1F"))),
-                                    TextSpan(
-                                        text:
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 21,
+                                        color: HexColor("#3E3A39"))),
+                                TextSpan(
+                                    text: ' оранжевую кнопку',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 21,
+                                        color: HexColor("#FF8E1F"))),
+                                TextSpan(
+                                    text:
                                         ', чтобы окунуться в захватывающий мир развлечений, или',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 21,
-                                            color: HexColor("#3E3A39"))),
-                                    TextSpan(
-                                        text: ' розовую кнопку',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                            color: HexColor("#F11D81"))),
-                                    TextSpan(
-                                        text: ', чтобы я рассказал историю!',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 21,
-                                            color: HexColor("#3E3A39"))),
-                                  ]))),
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 21,
+                                        color: HexColor("#3E3A39"))),
+                                TextSpan(
+                                    text: ' розовую кнопку',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 21,
+                                        color: HexColor("#F11D81"))),
+                                TextSpan(
+                                    text: ', чтобы я рассказал историю!',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 21,
+                                        color: HexColor("#3E3A39"))),
+                              ]))),
                     ),
                   ],
                 )
