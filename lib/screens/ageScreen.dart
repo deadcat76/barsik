@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AgeScreen extends StatefulWidget {
   const AgeScreen({super.key});
@@ -34,11 +35,10 @@ class _AgeScreenState extends State<AgeScreen> {
                         GoRouter.of(context)
                             .pushNamed(MyAppRoutesConstants.ageEditRoute);
                       },
-                      child: const Image(
-                        image: AssetImage('assets/settings.png'),
-                        width: 90,
-                        height: 90,
-                      ),
+                      child: SvgPicture.asset(
+                          'assets/settings.svg',
+                          width: 90,
+                          height: 90)
                     ),
                   ],
                 ),
@@ -50,12 +50,10 @@ class _AgeScreenState extends State<AgeScreen> {
                         GoRouter.of(context)
                             .pushNamed(MyAppRoutesConstants.ageSetRoute);
                       },
-                      child: const Image(
-                        image: AssetImage('assets/sound.png'),
-                        width: 90,
-                        height: 90,
-                      ),
-                    ),
+                      child: SvgPicture.asset(
+                          'assets/sound.svg',
+                          width: 90,
+                          height: 90)),
                   ],
                 ),
               ],

@@ -4,8 +4,8 @@ import 'package:barsik/screens/ageEditScreen.dart';
 import 'package:barsik/screens/errorScreen.dart';
 import 'package:barsik/screens/gameChangeScreen.dart';
 import 'package:barsik/screens/homeScreen.dart';
+import 'package:barsik/screens/menuScreen.dart';
 import 'package:barsik/screens/movieChangeScreen.dart';
-import 'package:barsik/screens/nameScreen.dart';
 import 'package:barsik/screens/ageScreen.dart';
 import 'package:barsik/screens/actionScreen.dart';
 import 'package:flutter/material.dart';
@@ -20,12 +20,6 @@ class MyAppRouter{
           pageBuilder: (context, state) {
             return const MaterialPage(child: Home());
           }),
-      GoRoute(
-        name: MyAppRoutesConstants.nameSetRoute,
-        path: '/name_set',
-        pageBuilder: (context, state) {
-          return const MaterialPage(child: NameScreen());
-        }),
       GoRoute(
         name: MyAppRoutesConstants.ageSetRoute,
         path: '/age_set',
@@ -121,6 +115,23 @@ class MyAppRouter{
               fullscreenDialog: true,
               key: state.pageKey,
               child: const MovieChangeScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
+          }),
+      GoRoute(
+          name: MyAppRoutesConstants.menuRoute,
+          path: '/menu_get',
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 500),
+              fullscreenDialog: true,
+              key: state.pageKey,
+              child: const MenuScreen(),
               transitionsBuilder: (context, animation, secondaryAnimation, child) {
                 return FadeTransition(
                   opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),

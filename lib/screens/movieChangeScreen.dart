@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class MovieChangeScreen extends StatefulWidget {
   const MovieChangeScreen({super.key});
@@ -32,17 +33,14 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () {
-                                    GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.gameChangeRoute);
-                                  },
-                                  child: const Image(
-                                    image: AssetImage(
-                                        'assets/left_button_game.png'),
-                                    width: 69.12,
-                                    height: 120,
-                                  ),
-                                ),
+                                    onTap: () {
+                                      GoRouter.of(context).pushNamed(
+                                          MyAppRoutesConstants.gameChangeRoute);
+                                    },
+                                    child: SvgPicture.asset(
+                                        'assets/left_button_game.svg',
+                                        width: 69.12,
+                                        height: 120)),
                               ],
                             ),
                             const SizedBox(
@@ -53,15 +51,12 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                                 InkWell(
                                   onTap: () {
                                     GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.ageEditRoute);
+                                        MyAppRoutesConstants.menuRoute);
                                   },
-                                  child: const Image(
-                                    image: AssetImage(
-                                        'assets/left_button_food.png'),
-                                    width: 69.12,
-                                    height: 120,
-                                  ),
-                                ),
+                                  child: SvgPicture.asset(
+                                      'assets/left_button_food.svg',
+                                      width: 69.12,
+                                      height: 120)),
                               ],
                             ),
                             const SizedBox(
@@ -74,13 +69,10 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                                     GoRouter.of(context).pushNamed(
                                         MyAppRoutesConstants.movieChangeRoute);
                                   },
-                                  child: const Image(
-                                    image: AssetImage(
-                                        'assets/left_button_movie_active.png'),
-                                    width: 69.12,
-                                    height: 120,
-                                  ),
-                                ),
+                                  child: SvgPicture.asset(
+                                      'assets/left_button_movie_active.svg',
+                                      width: 69.12,
+                                      height: 120)),
                               ],
                             ),
                           ],
@@ -113,7 +105,8 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                                     InkWell(
                                       onTap: () {
                                         GoRouter.of(context).pushNamed(
-                                            MyAppRoutesConstants.actionDoubleRoute);
+                                            MyAppRoutesConstants
+                                                .actionDoubleRoute);
                                       },
                                       child: const Image(
                                         image: AssetImage('assets/movie1.png'),
@@ -145,32 +138,24 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               InkWell(
-                                onTap: () {
-                                  GoRouter.of(context).pushNamed(
-                                      MyAppRoutesConstants.ageEditRoute);
-                                },
-                                child: const Image(
-                                  image: AssetImage('assets/settings.png'),
-                                  width: 90,
-                                  height: 90,
-                                ),
-                              ),
+                                  onTap: () {
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.ageEditRoute);
+                                  },
+                                  child: SvgPicture.asset('assets/settings.svg',
+                                      width: 90, height: 90)),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               InkWell(
-                                onTap: () {
-                                  GoRouter.of(context).pushNamed(
-                                      MyAppRoutesConstants.ageSetRoute);
-                                },
-                                child: const Image(
-                                  image: AssetImage('assets/sound.png'),
-                                  width: 90,
-                                  height: 90,
-                                ),
-                              ),
+                                  onTap: () {
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.ageSetRoute);
+                                  },
+                                  child: SvgPicture.asset('assets/sound.svg',
+                                      width: 90, height: 90)),
                             ],
                           ),
                         ],
@@ -211,7 +196,7 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                                   shape: MaterialStateProperty.all(
                                       RoundedRectangleBorder(
                                           borderRadius:
-                                          BorderRadius.circular(12),
+                                              BorderRadius.circular(12),
                                           side: const BorderSide(
                                               color: Colors.white,
                                               width: 4.0)))),
@@ -245,40 +230,40 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                           child: RichText(
                               text: TextSpan(
                                   text:
-                                  'Здорово, хочешь сыграть в игру? Нажми на одну из',
+                                      'Здорово, хочешь сыграть в игру? Нажми на одну из',
                                   style: TextStyle(
                                       fontSize: 21,
                                       color: HexColor("#3E3A39"),
                                       fontFamily: 'Montserrat'),
                                   children: <TextSpan>[
-                                    TextSpan(
-                                        text: ' красных кнопок',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                            color: HexColor("#FF381E"))),
-                                    TextSpan(
-                                        text:
+                                TextSpan(
+                                    text: ' красных кнопок',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 21,
+                                        color: HexColor("#FF381E"))),
+                                TextSpan(
+                                    text:
                                         ', и я расскажу тебе об этой захватывающей игре! Или, если хочешь заняться чем-нибудь другим, нажми',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 21,
-                                            color: HexColor("#3E3A39"))),
-                                    TextSpan(
-                                        text: ' голубую кнопку',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                            color: HexColor("#20BBDF"))),
-                                    TextSpan(
-                                        text: '.',
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 21,
-                                            color: HexColor("#3E3A39"))),
-                                  ]))),
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 21,
+                                        color: HexColor("#3E3A39"))),
+                                TextSpan(
+                                    text: ' голубую кнопку',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 21,
+                                        color: HexColor("#20BBDF"))),
+                                TextSpan(
+                                    text: '.',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 21,
+                                        color: HexColor("#3E3A39"))),
+                              ]))),
                     ),
                   ],
                 )

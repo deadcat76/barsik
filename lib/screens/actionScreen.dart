@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ActionScreen extends StatefulWidget {
   const ActionScreen({super.key});
@@ -36,17 +37,14 @@ class _ActionScreenState extends State<ActionScreen> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () {
-                                    GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.gameChangeRoute);
-                                  },
-                                  child: const Image(
-                                    image: AssetImage(
-                                        'assets/left_button_game.png'),
-                                    width: 69.12,
-                                    height: 120,
-                                  ),
-                                ),
+                                    onTap: () {
+                                      GoRouter.of(context).pushNamed(
+                                          MyAppRoutesConstants.gameChangeRoute);
+                                    },
+                                    child: SvgPicture.asset(
+                                        'assets/left_button_game.svg',
+                                        width: 69.12,
+                                        height: 120)),
                               ],
                             ),
                             const SizedBox(
@@ -57,15 +55,12 @@ class _ActionScreenState extends State<ActionScreen> {
                                 InkWell(
                                   onTap: () {
                                     GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.ageEditRoute);
+                                        MyAppRoutesConstants.menuRoute);
                                   },
-                                  child: const Image(
-                                    image: AssetImage(
-                                        'assets/left_button_food.png'),
-                                    width: 69.12,
-                                    height: 120,
-                                  ),
-                                ),
+                                  child: SvgPicture.asset(
+                                      'assets/left_button_food.svg',
+                                      width: 69.12,
+                                      height: 120)),
                               ],
                             ),
                             const SizedBox(
@@ -78,13 +73,10 @@ class _ActionScreenState extends State<ActionScreen> {
                                     GoRouter.of(context).pushNamed(
                                         MyAppRoutesConstants.movieChangeRoute);
                                   },
-                                  child: const Image(
-                                    image: AssetImage(
-                                        'assets/left_button_movie.png'),
-                                    width: 69.12,
-                                    height: 120,
-                                  ),
-                                ),
+                                    child: SvgPicture.asset(
+                                        'assets/left_button_movie.svg',
+                                        width: 69.12,
+                                        height: 120)),
                               ],
                             ),
                           ],
@@ -98,30 +90,27 @@ class _ActionScreenState extends State<ActionScreen> {
                           children: <Widget>[
                             InkWell(
                               onTap: () {
-                                GoRouter.of(context).pushNamed(
-                                    MyAppRoutesConstants
-                                        .actionRoute); //потом поменять ссылку
+                                GoRouter.of(context)
+                                    .pushNamed(MyAppRoutesConstants.menuRoute);
                               },
-                              child: const Image(
-                                image: AssetImage('assets/button_food.png'),
+                              child: SvgPicture.asset(
+                                'assets/button_food.svg',
                                 width: 130,
                                 height: 80,
-                              ),
-                            ),
+                              )),
                             const SizedBox(
                               width: 15,
                             ),
                             InkWell(
-                              onTap: () {
-                                GoRouter.of(context).pushNamed(
-                                    MyAppRoutesConstants.gameChangeRoute);
-                              },
-                              child: const Image(
-                                image: AssetImage('assets/button_game.png'),
-                                width: 130,
-                                height: 80,
-                              ),
-                            ),
+                                onTap: () {
+                                  GoRouter.of(context).pushNamed(
+                                      MyAppRoutesConstants.gameChangeRoute);
+                                },
+                                child: SvgPicture.asset(
+                                  'assets/button_game.svg',
+                                  width: 130,
+                                  height: 80,
+                                )),
                             const SizedBox(
                               width: 15,
                             ),
@@ -130,12 +119,11 @@ class _ActionScreenState extends State<ActionScreen> {
                                 GoRouter.of(context).pushNamed(
                                     MyAppRoutesConstants.movieChangeRoute);
                               },
-                              child: const Image(
-                                image: AssetImage('assets/button_movie.png'),
+                              child: SvgPicture.asset(
+                                'assets/button_movie.svg',
                                 width: 130,
                                 height: 80,
-                              ),
-                            ),
+                              )),
                           ],
                         ),
                       ),
@@ -145,16 +133,12 @@ class _ActionScreenState extends State<ActionScreen> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               InkWell(
-                                onTap: () {
-                                  GoRouter.of(context).pushNamed(
-                                      MyAppRoutesConstants.ageEditRoute);
-                                },
-                                child: const Image(
-                                  image: AssetImage('assets/settings.png'),
-                                  width: 90,
-                                  height: 90,
-                                ),
-                              ),
+                                  onTap: () {
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.ageEditRoute);
+                                  },
+                                  child: SvgPicture.asset('assets/settings.svg',
+                                      width: 90, height: 90)),
                             ],
                           ),
                           Row(
@@ -165,11 +149,8 @@ class _ActionScreenState extends State<ActionScreen> {
                                   GoRouter.of(context).pushNamed(
                                       MyAppRoutesConstants.ageSetRoute);
                                 },
-                                child: const Image(
-                                  image: AssetImage('assets/sound.png'),
-                                  width: 90,
-                                  height: 90,
-                                ),
+                                child: SvgPicture.asset('assets/sound.svg',
+                                    width: 90, height: 90),
                               ),
                             ],
                           ),

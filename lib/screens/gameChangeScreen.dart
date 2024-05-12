@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class GameChangeScreen extends StatefulWidget {
   const GameChangeScreen({super.key});
@@ -32,17 +33,14 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () {
-                                    GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.gameChangeRoute);
-                                  },
-                                  child: const Image(
-                                    image: AssetImage(
-                                        'assets/left_button_game_active.png'),
-                                    width: 69.12,
-                                    height: 120,
-                                  ),
-                                ),
+                                    onTap: () {
+                                      GoRouter.of(context).pushNamed(
+                                          MyAppRoutesConstants.gameChangeRoute);
+                                    },
+                                    child: SvgPicture.asset(
+                                        'assets/left_button_game_active.svg',
+                                        width: 69.12,
+                                        height: 120)),
                               ],
                             ),
                             const SizedBox(
@@ -53,15 +51,12 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                 InkWell(
                                   onTap: () {
                                     GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.ageEditRoute);
+                                        MyAppRoutesConstants.menuRoute);
                                   },
-                                  child: const Image(
-                                    image: AssetImage(
-                                        'assets/left_button_food.png'),
-                                    width: 69.12,
-                                    height: 120,
-                                  ),
-                                ),
+                                  child: SvgPicture.asset(
+                                      'assets/left_button_food.svg',
+                                      width: 69.12,
+                                      height: 120)),
                               ],
                             ),
                             const SizedBox(
@@ -74,13 +69,10 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                     GoRouter.of(context).pushNamed(
                                         MyAppRoutesConstants.movieChangeRoute);
                                   },
-                                  child: const Image(
-                                    image: AssetImage(
-                                        'assets/left_button_movie.png'),
-                                    width: 69.12,
-                                    height: 120,
-                                  ),
-                                ),
+                                  child: SvgPicture.asset(
+                                      'assets/left_button_movie.svg',
+                                      width: 69.12,
+                                      height: 120)),
                               ],
                             ),
                           ],
@@ -109,16 +101,16 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                 Column(
                                   children: [
                                     InkWell(
-                                      onTap: () {
-                                        GoRouter.of(context).pushNamed(
-                                            MyAppRoutesConstants.actionDoubleRoute);
-                                      },
-                                      child: const Image(
-                                        image: AssetImage('assets/game1.png'),
-                                        width: 335,
-                                        height: 193,
-                                      ),
-                                    ),
+                                        onTap: () {
+                                          GoRouter.of(context).pushNamed(
+                                              MyAppRoutesConstants
+                                                  .actionDoubleRoute);
+                                        },
+                                        child: const Image(
+                                          image: AssetImage('assets/game1.png'),
+                                          width: 335,
+                                          height: 193,
+                                        )),
                                     const SizedBox(
                                       height: 15,
                                     ),
@@ -138,16 +130,16 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                 Column(
                                   children: [
                                     InkWell(
-                                      onTap: () {
-                                        GoRouter.of(context).pushNamed(
-                                            MyAppRoutesConstants.actionDoubleRoute);
-                                      },
-                                      child: const Image(
-                                        image: AssetImage('assets/game2.png'),
-                                        width: 335,
-                                        height: 193,
-                                      ),
-                                    ),
+                                        onTap: () {
+                                          GoRouter.of(context).pushNamed(
+                                              MyAppRoutesConstants
+                                                  .actionDoubleRoute);
+                                        },
+                                        child: const Image(
+                                          image: AssetImage('assets/game2.png'),
+                                          width: 335,
+                                          height: 193,
+                                        )),
                                     const SizedBox(
                                       height: 15,
                                     ),
@@ -167,16 +159,16 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                                 Column(
                                   children: [
                                     InkWell(
-                                      onTap: () {
-                                        GoRouter.of(context).pushNamed(
-                                            MyAppRoutesConstants.actionDoubleRoute);
-                                      },
-                                      child: const Image(
-                                        image: AssetImage('assets/game3.png'),
-                                        width: 335,
-                                        height: 193,
-                                      ),
-                                    ),
+                                        onTap: () {
+                                          GoRouter.of(context).pushNamed(
+                                              MyAppRoutesConstants
+                                                  .actionDoubleRoute);
+                                        },
+                                        child: const Image(
+                                          image: AssetImage('assets/game3.png'),
+                                          width: 335,
+                                          height: 193,
+                                        )),
                                     const SizedBox(
                                       height: 15,
                                     ),
@@ -201,32 +193,24 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               InkWell(
-                                onTap: () {
-                                  GoRouter.of(context).pushNamed(
-                                      MyAppRoutesConstants.ageEditRoute);
-                                },
-                                child: const Image(
-                                  image: AssetImage('assets/settings.png'),
-                                  width: 90,
-                                  height: 90,
-                                ),
-                              ),
+                                  onTap: () {
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.ageEditRoute);
+                                  },
+                                  child: SvgPicture.asset('assets/settings.svg',
+                                      width: 90, height: 90)),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               InkWell(
-                                onTap: () {
-                                  GoRouter.of(context).pushNamed(
-                                      MyAppRoutesConstants.ageSetRoute);
-                                },
-                                child: const Image(
-                                  image: AssetImage('assets/sound.png'),
-                                  width: 90,
-                                  height: 90,
-                                ),
-                              ),
+                                  onTap: () {
+                                    GoRouter.of(context).pushNamed(
+                                        MyAppRoutesConstants.ageSetRoute);
+                                  },
+                                  child: SvgPicture.asset('assets/sound.svg',
+                                      width: 90, height: 90)),
                             ],
                           ),
                         ],
