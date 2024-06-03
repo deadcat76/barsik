@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "585828633006",
+    "project_id": "barsikflut",
+    "storage_bucket": "barsikflut.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585828633006:android:e9ce778c983a5993e3603f",
+        "android_client_info": {
+          "package_name": "com.example.barsik"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnNn4i6i8MAvrtPR3jq1MlC7Svd4c3k60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

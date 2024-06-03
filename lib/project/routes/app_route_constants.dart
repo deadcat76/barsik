@@ -8,4 +8,5 @@ class MyAppRoutesConstants{
   static const String gameChangeRoute = 'game_change';
   static const String movieChangeRoute = 'movie_change';
   static const String menuRoute = 'menu_get';
+  static const String menuItemRoute = 'menu_item';
 }

@@ -13,7 +13,7 @@ class Home extends StatelessWidget {
       body:Stack(
         children: [
           SvgPicture.asset(
-            'assets/back_home.svg',
+            'assets/back_main.jpg',
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
