@@ -172,7 +172,7 @@ class MyAppRouter {
                       child: child,
                     );
                   });
-            })
+            }),
       ],
       errorPageBuilder: (context, state) {
         return CustomTransitionPage(
