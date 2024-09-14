@@ -242,7 +242,6 @@ class _ActionScreenState extends State<ActionScreen> {
                 )
               ],
             ),
-
           ],
         ),
       ),

@@ -48,14 +48,14 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () {
-                                    GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.menuRoute);
-                                  },
-                                  child: SvgPicture.asset(
-                                      'assets/left_button_food.svg',
-                                      width: 69.12,
-                                      height: 120)),
+                                    onTap: () {
+                                      GoRouter.of(context).pushNamed(
+                                          MyAppRoutesConstants.menuRoute);
+                                    },
+                                    child: SvgPicture.asset(
+                                        'assets/left_button_food.svg',
+                                        width: 69.12,
+                                        height: 120)),
                               ],
                             ),
                             const SizedBox(
@@ -64,14 +64,15 @@ class _MovieChangeScreenState extends State<MovieChangeScreen> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () {
-                                    GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.movieChangeRoute);
-                                  },
-                                  child: SvgPicture.asset(
-                                      'assets/left_button_movie_active.svg',
-                                      width: 69.12,
-                                      height: 120)),
+                                    onTap: () {
+                                      GoRouter.of(context).pushNamed(
+                                          MyAppRoutesConstants
+                                              .movieChangeRoute);
+                                    },
+                                    child: SvgPicture.asset(
+                                        'assets/left_button_movie_active.svg',
+                                        width: 69.12,
+                                        height: 120)),
                               ],
                             ),
                           ],

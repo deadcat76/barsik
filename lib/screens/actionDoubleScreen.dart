@@ -1,5 +1,4 @@
 import 'package:barsik/project/routes/app_route_constants.dart';
-import 'package:barsik/widgets/reusable_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -51,14 +50,14 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () {
-                                    GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.menuRoute);
-                                  },
-                                  child: SvgPicture.asset(
-                                      'assets/left_button_food.svg',
-                                      width: 69.12,
-                                      height: 120)),
+                                    onTap: () {
+                                      GoRouter.of(context).pushNamed(
+                                          MyAppRoutesConstants.menuRoute);
+                                    },
+                                    child: SvgPicture.asset(
+                                        'assets/left_button_food.svg',
+                                        width: 69.12,
+                                        height: 120)),
                               ],
                             ),
                             const SizedBox(
@@ -67,10 +66,11 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () {
-                                    GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.movieChangeRoute);
-                                  },
+                                    onTap: () {
+                                      GoRouter.of(context).pushNamed(
+                                          MyAppRoutesConstants
+                                              .movieChangeRoute);
+                                    },
                                     child: SvgPicture.asset(
                                         'assets/left_button_movie.svg',
                                         width: 69.12,
@@ -100,28 +100,28 @@ class _ActionDoubleScreenState extends State<ActionDoubleScreen> {
                               width: 15,
                             ),
                             InkWell(
-                              onTap: () {
-                                GoRouter.of(context).pushNamed(
-                                    MyAppRoutesConstants.movieChangeRoute);
-                              },
-                              child: SvgPicture.asset(
-                                'assets/button_movie.svg',
-                                width: 130,
-                                height: 80,
-                              )),
+                                onTap: () {
+                                  GoRouter.of(context).pushNamed(
+                                      MyAppRoutesConstants.movieChangeRoute);
+                                },
+                                child: SvgPicture.asset(
+                                  'assets/button_movie.svg',
+                                  width: 130,
+                                  height: 80,
+                                )),
                             const SizedBox(
                               width: 15,
                             ),
                             InkWell(
-                              onTap: () {
-                                GoRouter.of(context)
-                                    .pushNamed(MyAppRoutesConstants.menuRoute);
-                              },
-                              child: SvgPicture.asset(
-                                'assets/button_food.svg',
-                                width: 130,
-                                height: 80,
-                              )),
+                                onTap: () {
+                                  GoRouter.of(context).pushNamed(
+                                      MyAppRoutesConstants.menuRoute);
+                                },
+                                child: SvgPicture.asset(
+                                  'assets/button_food.svg',
+                                  width: 130,
+                                  height: 80,
+                                )),
                           ],
                         ),
                       ),

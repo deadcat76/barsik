@@ -1,6 +1,4 @@
 import 'package:barsik/project/routes/app_route_constants.dart';
-import 'package:barsik/widgets/reusable_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -14,7 +12,6 @@ class AgeEditScreen extends StatefulWidget {
 }
 
 class _AgeEditScreenState extends State<AgeEditScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,30 +28,24 @@ class _AgeEditScreenState extends State<AgeEditScreen> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     InkWell(
-                      onTap: () {
-                        GoRouter.of(context)
-                            .pushNamed(MyAppRoutesConstants.ageEditRoute);
-                      },
-                      child: SvgPicture.asset(
-                          'assets/settings_active.svg',
-                          width: 90,
-                          height: 90)
-                    ),
+                        onTap: () {
+                          GoRouter.of(context)
+                              .pushNamed(MyAppRoutesConstants.ageEditRoute);
+                        },
+                        child: SvgPicture.asset('assets/settings_active.svg',
+                            width: 90, height: 90)),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     InkWell(
-                      onTap: () {
-                        GoRouter.of(context)
-                            .pushNamed(MyAppRoutesConstants.ageSetRoute);
-                      },
-                      child: SvgPicture.asset(
-                          'assets/sound.svg',
-                          width: 90,
-                          height: 90)
-                    ),
+                        onTap: () {
+                          GoRouter.of(context)
+                              .pushNamed(MyAppRoutesConstants.ageSetRoute);
+                        },
+                        child: SvgPicture.asset('assets/sound.svg',
+                            width: 90, height: 90)),
                   ],
                 ),
               ],
@@ -69,13 +60,13 @@ class _AgeEditScreenState extends State<AgeEditScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                        MaterialStateProperty.all(const Size(320, 80)),
+                            MaterialStateProperty.all(const Size(320, 80)),
                         backgroundColor:
-                        MaterialStateProperty.all(HexColor("#1CEA56")),
+                            MaterialStateProperty.all(HexColor("#1CEA56")),
                         textStyle: MaterialStateProperty.all(
                             const TextStyle(color: Colors.white)),
                         padding:
-                        MaterialStateProperty.all(const EdgeInsets.all(20)),
+                            MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                             side: const BorderSide(
@@ -99,13 +90,13 @@ class _AgeEditScreenState extends State<AgeEditScreen> {
                   ElevatedButton(
                     style: ButtonStyle(
                         fixedSize:
-                        MaterialStateProperty.all(const Size(320, 80)),
+                            MaterialStateProperty.all(const Size(320, 80)),
                         backgroundColor:
-                        MaterialStateProperty.all(HexColor("#FF8E1F")),
+                            MaterialStateProperty.all(HexColor("#FF8E1F")),
                         textStyle: MaterialStateProperty.all(
                             const TextStyle(color: Colors.white)),
                         padding:
-                        MaterialStateProperty.all(const EdgeInsets.all(20)),
+                            MaterialStateProperty.all(const EdgeInsets.all(20)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                             side: const BorderSide(
@@ -135,15 +126,13 @@ class _AgeEditScreenState extends State<AgeEditScreen> {
             children: [
               Stack(
                 children: [
-                  const Row(
-                      children: [
-                        Image(
-                          image: AssetImage('assets/cat_smile.png'),
-                          width: 287.09,
-                          height: 317,
-                        ),
-                      ]
-                  ),
+                  const Row(children: [
+                    Image(
+                      image: AssetImage('assets/cat_smile.png'),
+                      width: 287.09,
+                      height: 317,
+                    ),
+                  ]),
                   Positioned(
                     top: 150,
                     left: 200,
@@ -159,41 +148,40 @@ class _AgeEditScreenState extends State<AgeEditScreen> {
                         child: RichText(
                             text: TextSpan(
                                 text:
-                                'Неправильно указал свой возраст? Ничего страшного! Давай его изменим. Нажми',
+                                    'Неправильно указал свой возраст? Ничего страшного! Давай его изменим. Нажми',
                                 style: TextStyle(
                                     fontSize: 21,
                                     color: HexColor("#3E3A39"),
                                     fontFamily: 'Montserrat'),
                                 children: <TextSpan>[
-                                  TextSpan(
-                                      text: ' зеленую кнопку',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 21,
-                                          color: HexColor("#1CEA56"))),
-                                  TextSpan(
-                                      text: ', если тебе до 5 лет, или',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 21,
-                                          color: HexColor("#3E3A39"))),
-                                  TextSpan(
-                                      text: ' оранжевую кнопку',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 21,
-                                          color: HexColor("#FF8E1F"))),
-                                  TextSpan(
-                                      text: ', если тебе от 5 до 7 лет, и мы продолжим играть!',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 21,
-                                          color: HexColor("#3E3A39"))),
-                                ]))
-                    ),
-
+                              TextSpan(
+                                  text: ' зеленую кнопку',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 21,
+                                      color: HexColor("#1CEA56"))),
+                              TextSpan(
+                                  text: ', если тебе до 5 лет, или',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 21,
+                                      color: HexColor("#3E3A39"))),
+                              TextSpan(
+                                  text: ' оранжевую кнопку',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 21,
+                                      color: HexColor("#FF8E1F"))),
+                              TextSpan(
+                                  text:
+                                      ', если тебе от 5 до 7 лет, и мы продолжим играть!',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 21,
+                                      color: HexColor("#3E3A39"))),
+                            ]))),
                   ),
                 ],
               )

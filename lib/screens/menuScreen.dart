@@ -5,8 +5,6 @@ import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/rendering.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -34,7 +32,7 @@ class _MenuScreenState extends State<MenuScreen> {
         padding: const EdgeInsets.only(top: 55, right: 25),
         width: double.infinity,
         height: 6690,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover, image: AssetImage('assets/back_menu.jpg'))),
         child: Stack(
@@ -86,8 +84,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       child: SvgPicture.asset('assets/settings.svg',
                           width: 90, height: 90)),
                   InkWell(
-                      onTap: () {
-                      },
+                      onTap: () {},
                       child: SvgPicture.asset('assets/sound.svg',
                           width: 90, height: 90)),
                 ],
@@ -116,10 +113,10 @@ class _MenuScreenState extends State<MenuScreen> {
                   ),
                 )),
             Positioned(
-                top: 220,
+                top: 150,
                 child: Container(
-                  width: 1250,
-                  padding: const EdgeInsets.symmetric(horizontal: 80),
+                  width: 1180,
+                  padding: const EdgeInsets.only(left: 80),
                   child: StreamBuilder(
                       stream: FirebaseFirestore.instance
                           .collection('items')
@@ -141,155 +138,169 @@ class _MenuScreenState extends State<MenuScreen> {
                             itemCount: snapshot.data?.docs.length,
                             itemBuilder: (BuildContext context, int index) {
                               if (index % 2 == 0) {
-                                return Row(
+                                return Column(
                                   children: [
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(20),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: [
-                                            Row(
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(20),
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
                                               children: [
-                                                Text(
-                                                  snapshot.data!.docs[index]
-                                                      .get('name'),
-                                                  style: TextStyle(
-                                                      fontSize: 42,
-                                                      fontFamily:
-                                                          "InterExtraBold",
-                                                      color:
-                                                          HexColor("#F4E6C6")),
-                                                )
-                                              ],
-                                            ),
-                                            Row(
-                                              children: [
-                                                Flexible(
-                                                    child: Text(
-                                                  snapshot.data!.docs[index]
-                                                      .get('description'),
-                                                  style: const TextStyle(
-                                                      fontSize: 28,
-                                                      fontFamily:
-                                                          "MontserratSemiBold",
-                                                      color: Colors.white),
-                                                ))
-                                              ],
-                                            ),
-                                            const SizedBox(
-                                              height: 20,
-                                            ),
-                                            Row(
-                                              children: [
-                                                Text(
-                                                  "${snapshot.data!.docs[index].get('weight')} гр.",
-                                                  style: const TextStyle(
-                                                      fontSize: 25,
-                                                      fontFamily:
-                                                          "MontserratSemiBold",
-                                                      color: Colors.white),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      snapshot.data!.docs[index]
+                                                          .get('name'),
+                                                      style: TextStyle(
+                                                          fontSize: 42,
+                                                          fontFamily:
+                                                              "InterExtraBold",
+                                                          color: HexColor(
+                                                              "#F4E6C6")),
+                                                    )
+                                                  ],
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Flexible(
+                                                        child: Text(
+                                                      snapshot.data!.docs[index]
+                                                          .get('description'),
+                                                      style: const TextStyle(
+                                                          fontSize: 28,
+                                                          fontFamily:
+                                                              "MontserratSemiBold",
+                                                          color: Colors.white),
+                                                    ))
+                                                  ],
                                                 ),
                                                 const SizedBox(
-                                                  width: 20,
+                                                  height: 30,
                                                 ),
-                                                Text(
-                                                  "${snapshot.data!.docs[index].get('price')} руб.",
-                                                  style: TextStyle(
-                                                      fontSize: 30,
-                                                      fontFamily:
-                                                          "MontserratExtraBold",
-                                                      color:
-                                                          HexColor("#F4E6C6")),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      "${snapshot.data!.docs[index].get('weight')} гр.",
+                                                      style: const TextStyle(
+                                                          fontSize: 25,
+                                                          fontFamily:
+                                                              "MontserratSemiBold",
+                                                          color: Colors.white),
+                                                    ),
+                                                    const SizedBox(
+                                                      width: 20,
+                                                    ),
+                                                    Text(
+                                                      "${snapshot.data!.docs[index].get('price')} руб.",
+                                                      style: TextStyle(
+                                                          fontSize: 30,
+                                                          fontFamily:
+                                                              "MontserratExtraBold",
+                                                          color: HexColor(
+                                                              "#F4E6C6")),
+                                                    )
+                                                  ],
                                                 )
                                               ],
-                                            )
-                                          ],
+                                            ),
+                                          ),
                                         ),
-                                      ),
+                                        Expanded(
+                                            child: Image.network(
+                                          snapshot.data!.docs[index].get('url'),
+                                          fit: BoxFit.cover,
+                                        )),
+                                      ],
                                     ),
-                                    Expanded(
-                                        child: Image.network(
-                                      snapshot.data!.docs[index].get('url'),
-                                      fit: BoxFit.cover,
-                                    )),
+                                    const SizedBox(
+                                      height: 30,
+                                    )
                                   ],
                                 );
                               } else {
-                                return Row(
+                                return Column(
                                   children: [
-                                    Expanded(
-                                        child: Image.network(
-                                      snapshot.data!.docs[index].get('url'),
-                                      fit: BoxFit.cover,
-                                    )),
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(20),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: [
-                                            Row(
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                            child: Image.network(
+                                          snapshot.data!.docs[index].get('url'),
+                                          fit: BoxFit.cover,
+                                        )),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(20),
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
                                               children: [
-                                                Text(
-                                                  snapshot.data!.docs[index]
-                                                      .get('name'),
-                                                  style: TextStyle(
-                                                      fontSize: 42,
-                                                      fontFamily:
-                                                          "InterExtraBold",
-                                                      color:
-                                                          HexColor("#F4E6C6")),
-                                                )
-                                              ],
-                                            ),
-                                            Row(
-                                              children: [
-                                                Flexible(
-                                                    child: Text(
-                                                  snapshot.data!.docs[index]
-                                                      .get('description'),
-                                                  style: const TextStyle(
-                                                      fontSize: 28,
-                                                      fontFamily:
-                                                          "MontserratSemiBold",
-                                                      color: Colors.white),
-                                                ))
-                                              ],
-                                            ),
-                                            const SizedBox(
-                                              height: 20,
-                                            ),
-                                            Row(
-                                              children: [
-                                                Text(
-                                                  "${snapshot.data!.docs[index].get('weight')} гр.",
-                                                  style: const TextStyle(
-                                                      fontSize: 25,
-                                                      fontFamily:
-                                                          "MontserratSemiBold",
-                                                      color: Colors.white),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      snapshot.data!.docs[index]
+                                                          .get('name'),
+                                                      style: TextStyle(
+                                                          fontSize: 42,
+                                                          fontFamily:
+                                                              "InterExtraBold",
+                                                          color: HexColor(
+                                                              "#F4E6C6")),
+                                                    )
+                                                  ],
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Flexible(
+                                                        child: Text(
+                                                      snapshot.data!.docs[index]
+                                                          .get('description'),
+                                                      style: const TextStyle(
+                                                          fontSize: 28,
+                                                          fontFamily:
+                                                              "MontserratSemiBold",
+                                                          color: Colors.white),
+                                                    ))
+                                                  ],
                                                 ),
                                                 const SizedBox(
-                                                  width: 20,
+                                                  height: 20,
                                                 ),
-                                                Text(
-                                                  "${snapshot.data!.docs[index].get('price')} руб.",
-                                                  style: TextStyle(
-                                                      fontSize: 30,
-                                                      fontFamily:
-                                                          "MontserratExtraBold",
-                                                      color:
-                                                          HexColor("#F4E6C6")),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      "${snapshot.data!.docs[index].get('weight')} гр.",
+                                                      style: const TextStyle(
+                                                          fontSize: 25,
+                                                          fontFamily:
+                                                              "MontserratSemiBold",
+                                                          color: Colors.white),
+                                                    ),
+                                                    const SizedBox(
+                                                      width: 20,
+                                                    ),
+                                                    Text(
+                                                      "${snapshot.data!.docs[index].get('price')} руб.",
+                                                      style: TextStyle(
+                                                          fontSize: 30,
+                                                          fontFamily:
+                                                              "MontserratExtraBold",
+                                                          color: HexColor(
+                                                              "#F4E6C6")),
+                                                    )
+                                                  ],
                                                 )
                                               ],
-                                            )
-                                          ],
+                                            ),
+                                          ),
                                         ),
-                                      ),
+                                      ],
                                     ),
+                                    const SizedBox(
+                                      height: 30,
+                                    )
                                   ],
                                 );
                               }

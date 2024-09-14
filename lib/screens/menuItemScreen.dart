@@ -201,7 +201,6 @@ class _MenuItemState extends State<MenuItem> {
                             ],
                           );
                         }
-                        ;
                         // return Dismissible(
                         //     key: Key(snapshot.data!.docs[index].id),
                         //     child: Card(

@@ -4,7 +4,6 @@ import 'package:barsik/screens/ageEditScreen.dart';
 import 'package:barsik/screens/errorScreen.dart';
 import 'package:barsik/screens/gameChangeScreen.dart';
 import 'package:barsik/screens/homeScreen.dart';
-import 'package:barsik/screens/menuItemScreen.dart';
 import 'package:barsik/screens/menuScreen.dart';
 import 'package:barsik/screens/movieChangeScreen.dart';
 import 'package:barsik/screens/ageScreen.dart';
@@ -154,24 +153,6 @@ class MyAppRouter {
                   );
                 },
               );
-            }),
-        GoRoute(
-            name: MyAppRoutesConstants.menuItemRoute,
-            path: '/menu_item',
-            pageBuilder: (context, state) {
-              return CustomTransitionPage(
-                  transitionDuration: const Duration(milliseconds: 500),
-                  fullscreenDialog: true,
-                  key: state.pageKey,
-                  child: const MenuItem(),
-                  transitionsBuilder:
-                      (context, animation, secondaryAnimation, child) {
-                    return FadeTransition(
-                      opacity: CurveTween(curve: Curves.easeInOutCirc)
-                          .animate(animation),
-                      child: child,
-                    );
-                  });
             }),
       ],
       errorPageBuilder: (context, state) {
