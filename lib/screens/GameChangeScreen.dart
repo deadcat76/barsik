@@ -1,5 +1,4 @@
 import 'package:barsik/project/routes/app_route_constants.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -49,14 +48,14 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () {
-                                    GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.menuRoute);
-                                  },
-                                  child: SvgPicture.asset(
-                                      'assets/left_button_food.svg',
-                                      width: 69.12,
-                                      height: 120)),
+                                    onTap: () {
+                                      GoRouter.of(context).pushNamed(
+                                          MyAppRoutesConstants.menuRoute);
+                                    },
+                                    child: SvgPicture.asset(
+                                        'assets/left_button_food.svg',
+                                        width: 69.12,
+                                        height: 120)),
                               ],
                             ),
                             const SizedBox(
@@ -65,14 +64,15 @@ class _GameChangeScreenState extends State<GameChangeScreen> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () {
-                                    GoRouter.of(context).pushNamed(
-                                        MyAppRoutesConstants.movieChangeRoute);
-                                  },
-                                  child: SvgPicture.asset(
-                                      'assets/left_button_movie.svg',
-                                      width: 69.12,
-                                      height: 120)),
+                                    onTap: () {
+                                      GoRouter.of(context).pushNamed(
+                                          MyAppRoutesConstants
+                                              .movieChangeRoute);
+                                    },
+                                    child: SvgPicture.asset(
+                                        'assets/left_button_movie.svg',
+                                        width: 69.12,
+                                        height: 120)),
                               ],
                             ),
                           ],
