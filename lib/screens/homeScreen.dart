@@ -24,6 +24,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   bool _showButton = false;
   bool _textAnimationCompleted = false;
   bool _earsShown = false;
+  bool _startAnimation = false;
+  var string = "БАРСИК";
 
   @override
   void initState() {
@@ -49,6 +51,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
     _tailAnimation = Tween<double>(begin: 0, end: 1).animate(
       CurvedAnimation(parent: _tailController, curve: Curves.easeInOut),
     );
+
+    Future.delayed(const Duration(seconds: 2), () {
+      setState(() {
+        _startAnimation = true;
+      });
+    });
 
     _earsController.repeat(reverse: true);
   }
@@ -163,10 +171,11 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             Positioned(
                 top: 220,
                 left: 11,
-                child: AnimatedTextKit(
+                child: _startAnimation
+                    ? AnimatedTextKit(
                   animatedTexts: [
                     WavyAnimatedText(
-                      'БАРСИК',
+                      string,
                       textStyle: TextStyle(
                         fontSize: 185,
                         fontFamily: 'ARCOCyrillic',
@@ -182,6 +191,13 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   onFinished: () {
                     _onTextAnimationFinished();
                   },
+                ): Text(string,
+                  style: TextStyle(
+                    fontSize: 185,
+                    fontFamily: 'ARCOCyrillic',
+                    letterSpacing: -2.0,
+                    color: HexColor("#558384"),
+                  ),
                 )),
             Positioned(
                 top: 520,
